@@ -1,9 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { MotionProps, motion } from 'framer-motion'
 import './logoDX.css'
 
-export function LogoDXAnimation() {
+interface LogoDXAnimationProps extends MotionProps {}
+
+export function LogoDXAnimation({ ...props }: LogoDXAnimationProps) {
   const icon = {
     hidden: {
       opacity: 0,
@@ -25,6 +27,7 @@ export function LogoDXAnimation() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`item`}
+      {...props}
     >
       <motion.path
         d="M64 33L46.5 0.5L117.5 70.5C108.667 86.5 90.8 118.8 90 120C89.6 121.2 90.1667 121.5 90.5 121.5H124L0 244.5C20.5 209.667 61.7 139.7 62.5 138.5C62.9 137.3 62.3333 136.667 62 136.5L34.5 136L64 33Z"

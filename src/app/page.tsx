@@ -19,7 +19,11 @@ export default function InitialPage() {
       animate={{ opacity: 1 }}
     >
       <motion.div className="flex flex-col justify-center items-center h-fit gap-5">
-        <LogoDXAnimation />
+        <LogoDXAnimation
+          initial={{ scale: 5 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
+        />
 
         <LoadingProgressBar
           style={{
