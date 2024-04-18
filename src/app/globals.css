@@ -18,4 +18,19 @@ body {
   height: 100vh;
 
   overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #1F1F1F #111111;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #111111; 
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background: #1F1F1F; 
 }
