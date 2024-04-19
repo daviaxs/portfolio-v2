@@ -3,6 +3,7 @@ import DaviAxsDesenho from '@/shared/assets/imgs/daviaxs-desenho.png'
 import Image from 'next/image'
 import { Button } from '@/shared/components/button'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function ApresentationPage() {
   return (
@@ -30,12 +31,15 @@ export default function ApresentationPage() {
         priority
         className="h-[25rem] w-auto aspect-auto max-sm:h-[18rem] mt-4"
       />
-      <Button.Root>
-        <Button.Text>Continuar</Button.Text>
-        <Button.Icon>
-          <ArrowRight size={25} />
-        </Button.Icon>
-      </Button.Root>
+
+      <Link href="/app/home">
+        <Button.Root>
+          <Button.Text>Continuar</Button.Text>
+          <Button.Icon>
+            <ArrowRight size={25} />
+          </Button.Icon>
+        </Button.Root>
+      </Link>
     </main>
   )
 }
