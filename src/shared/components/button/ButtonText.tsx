@@ -5,5 +5,9 @@ interface ButtonTextProps {
 }
 
 export function ButtonText({ children }: ButtonTextProps) {
-  return <p className="font-extrabold text-[2rem]">{children}</p>
+  return (
+    <p className="font-extrabold text-[2rem] max-sm:text-[1.5rem]">
+      {children}
+    </p>
+  )
 }
