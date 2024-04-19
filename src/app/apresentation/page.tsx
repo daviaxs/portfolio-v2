@@ -1,4 +1,6 @@
 import { WavingHand } from '@/shared/assets/svgs/WavingHand'
+import DaviAxsDesenho from '@/shared/assets/imgs/daviaxs-desenho.png'
+import Image from 'next/image'
 
 export default function ApresentationPage() {
   return (
@@ -10,15 +12,22 @@ export default function ApresentationPage() {
           <WavingHand className="w-[2.5rem]" />
         </div>
 
-        <h1 className="font-extrabold text-[2.5rem] text-center leading-none text-grey-50">
+        <h1 className="font-extrabold text-[2.5rem] text-center leading-none text-grey-50 max-md:text-[1.8rem]">
           Seja bem-vindo ao meu mundo digital!
         </h1>
 
-        <p className="text-grey-200 font-medium text-[1rem] text-center mt-2">
+        <p className="text-grey-200 font-medium text-[1rem] text-center mt-2 max-md:text-[0.7rem]">
           Explore meu portfólio, descubra meus projetos e mergulhe no mundo da
           programação comigo!
         </p>
       </div>
+
+      <Image
+        src={DaviAxsDesenho}
+        alt="davi-desenho"
+        priority
+        className="h-[25rem] w-auto aspect-auto max-sm:h-[18rem]"
+      />
     </main>
   )
 }
