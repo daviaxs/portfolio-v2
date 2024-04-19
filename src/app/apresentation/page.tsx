@@ -7,11 +7,22 @@ import { Button } from '@/shared/components/button'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Circle } from './utils/Circle'
 
 export default function ApresentationPage() {
+  const sizesCircle = [
+    'w-[400px] h-[400px]',
+    'w-[600px] h-[600px]',
+    'w-[800px] h-[800px]',
+    'w-[1000px] h-[1000px]',
+    'w-[1200px] h-[1200px]',
+    'w-[1400px] h-[1400px]',
+    'w-[1600px] h-[1600px]',
+  ]
+
   return (
     <AnimatePresence>
-      <motion.main className="flex flex-col items-center justify-center py-[1rem]">
+      <motion.main className="flex flex-col items-center justify-center py-[1rem] relative overflow-hidden">
         <motion.div
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -59,6 +70,17 @@ export default function ApresentationPage() {
               </Button.Icon>
             </Button.Root>
           </Link>
+        </motion.div>
+
+        <motion.div
+          className="z-[-1] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          {sizesCircle.map((size, index) => (
+            <Circle key={size} size={size} dashed={index % 2 === 0} />
+          ))}
         </motion.div>
       </motion.main>
     </AnimatePresence>
