@@ -1,3 +1,3 @@
 export function SidebarDesktop() {
-  return <div>sidebar</div>
+  return <div>test</div>
 }
