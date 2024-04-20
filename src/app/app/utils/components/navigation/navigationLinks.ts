@@ -1,4 +1,18 @@
-export const navigationLinks = [
+export type GetNavigationIconProps =
+  | 'home'
+  | 'pages'
+  | 'about'
+  | 'projects'
+  | 'contact'
+  | 'settings'
+
+type LinkType = {
+  link: string
+  icon: GetNavigationIconProps
+  title: string
+}
+
+export const navigationLinks: LinkType[] = [
   {
     link: '/app/home',
     icon: 'home',
