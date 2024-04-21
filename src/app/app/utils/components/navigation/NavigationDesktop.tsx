@@ -16,11 +16,11 @@ export function NavigationDesktop() {
 
   return (
     <aside className="h-full w-[5rem] bg-grey-900 border-r-[1px] border-grey-500 flex flex-col items-center justify-start">
-      <header className="border-b-[1px] border-grey-500 w-full py-4 flex items-center justify-center mb-4">
+      <header className="border-b-[1px] border-grey-500 w-full py-4 flex items-center justify-center">
         <NavigationDialog />
       </header>
 
-      <nav className="flex flex-col items-center justify-center w-full gap-4">
+      <nav className="flex flex-col items-center justify-start w-full gap-4 overflow-y-auto py-4">
         {desktopLinks.map((link) => (
           <Tooltip.Provider key={link.link}>
             <Tooltip.Root delayDuration={400}>

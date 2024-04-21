@@ -35,7 +35,7 @@ export function NavigationDialog() {
             </Dialog.Close>
           </header>
 
-          <nav className="flex flex-col items-center justify-center w-full gap-4 py-4 px-6">
+          <nav className="flex flex-col items-center justify-start w-full gap-4 py-4 px-6 overflow-y-auto">
             {desktopLinks.map((link) => (
               <Link
                 key={link.link}
