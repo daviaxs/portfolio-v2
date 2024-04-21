@@ -18,7 +18,9 @@ body {
   height: 100vh;
 
   overflow-x: hidden;
+}
 
+main, body {
   scrollbar-width: thin;
   scrollbar-color: #1F1F1F #111111;
 }

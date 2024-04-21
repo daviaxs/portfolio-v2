@@ -7,9 +7,10 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-full w-full overflow-hidden">
       <NavigationDesktop />
-      {children}
+
+      <main className="overflow-y-auto w-full h-full">{children}</main>
     </div>
   )
 }
