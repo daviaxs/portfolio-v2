@@ -6,13 +6,26 @@ import { usePathname } from 'next/navigation'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import { NavigationDialog } from './utils/components/navigation-dialog/NavigationDialog'
 import { GetDesktopIcon } from './utils/GetDesktopIcon'
+import { MouseEvent, useState } from 'react'
 
 const desktopLinks = navigationLinks.filter(
   (link) => link.link !== '/app/pages',
 )
 
 export function NavigationDesktop() {
+  const [isNavigation, setIsNavigation] = useState(false)
   const pathName = usePathname()
+
+  function handleNavigation(
+    event: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>,
+  ) {
+    if (isNavigation) {
+      event.preventDefault()
+    }
+
+    setIsNavigation(true)
+    setTimeout(() => setIsNavigation(false), 500)
+  }
 
   return (
     <aside className="h-full w-[5rem] bg-grey-900 border-r-[1px] border-grey-500 flex flex-col items-center justify-start">
@@ -21,18 +34,19 @@ export function NavigationDesktop() {
       </header>
 
       <nav className="flex flex-col items-center justify-start w-full gap-4 overflow-y-auto py-4">
-        {desktopLinks.map((link) => (
-          <Tooltip.Provider key={link.link}>
+        {desktopLinks.map((page) => (
+          <Tooltip.Provider key={page.link}>
             <Tooltip.Root delayDuration={400}>
               <Tooltip.Trigger>
                 <Link
-                  href={link.link}
-                  className={`w-fit p-3 rounded-lg flex items-center justify-center transition-colors text-center ${pathName === link.link ? 'bg-violet-400' : 'hover:bg-grey-500'}`}
+                  href={page.link}
+                  onClick={(event) => handleNavigation(event)}
+                  className={`w-fit p-3 rounded-lg flex items-center justify-center transition-colors text-center ${pathName === page.link ? 'bg-violet-400' : 'hover:bg-grey-500'}`}
                 >
                   <span
-                    className={`${pathName === link.link ? '' : 'opacity-50'}`}
+                    className={`${pathName === page.link ? '' : 'opacity-50'}`}
                   >
-                    {GetDesktopIcon(link.icon)}
+                    {GetDesktopIcon(page.icon)}
                   </span>
                 </Link>
               </Tooltip.Trigger>
@@ -41,7 +55,7 @@ export function NavigationDesktop() {
                   side="left"
                   className="bg-grey-500 p-2 rounded ml-2 font-semibold text-[1rem]"
                 >
-                  {link.title}
+                  {page.title}
                 </Tooltip.Content>
               </Tooltip.Portal>
             </Tooltip.Root>
