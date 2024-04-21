@@ -1,16 +1,40 @@
+'use client'
+
 import { ReactNode } from 'react'
 import { NavigationDesktop } from './utils/components/navigation/NavigationDesktop'
+import { AnimatePresence, motion } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
 interface DashboardLayoutProps {
   children: ReactNode
 }
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
+  const pathName = usePathname()
+
   return (
-    <div className="flex h-full w-full overflow-hidden">
+    <motion.div
+      className="flex h-full w-full overflow-hidden"
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <NavigationDesktop />
 
-      <main className="overflow-y-auto w-full h-full">{children}</main>
-    </div>
+      <main className="overflow-y-auto w-full h-full">
+        <AnimatePresence mode="wait">
+          <motion.div
+            layout
+            key={pathName}
+            initial={{ y: 5, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -5, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+      </main>
+    </motion.div>
   )
 }
