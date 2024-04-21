@@ -24,7 +24,7 @@ export function NavigationDialog() {
       <Dialog.Portal>
         <Dialog.Overlay className="DialogOverlay" />
 
-        <Dialog.Content className="DialogContent">
+        <Dialog.Content className="DialogContent border-grey-500 border-r-[1px]">
           <header className="w-full flex items-center justify-between p-4 border-grey-500 border-b-[1px]">
             <p className="font-extrabold text-[1.2rem]">Explorar</p>
 
