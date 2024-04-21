@@ -37,19 +37,20 @@ export function NavigationDialog() {
 
           <nav className="flex flex-col items-center justify-start w-full gap-4 py-4 px-6 overflow-y-auto">
             {desktopLinks.map((link) => (
-              <Link
-                key={link.link}
-                href={link.link}
-                className={`w-full p-3 rounded-lg flex items-center justify-start gap-4 transition-colors text-center ${pathName === link.link ? 'bg-violet-400' : 'hover:bg-grey-500'}`}
-              >
-                <span
-                  className={`${pathName === link.link ? '' : 'opacity-50'}`}
+              <Dialog.Close asChild key={link.link}>
+                <Link
+                  href={link.link}
+                  className={`w-full p-3 rounded-lg flex items-center justify-start gap-4 transition-colors text-center ${pathName === link.link ? 'bg-violet-400' : 'hover:bg-grey-500'}`}
                 >
-                  {GetDesktopIcon(link.icon)}
-                </span>
+                  <span
+                    className={`${pathName === link.link ? '' : 'opacity-50'}`}
+                  >
+                    {GetDesktopIcon(link.icon)}
+                  </span>
 
-                <p className="font-extrabold text-[1.1rem]">{link.title}</p>
-              </Link>
+                  <p className="font-extrabold text-[1.1rem]">{link.title}</p>
+                </Link>
+              </Dialog.Close>
             ))}
           </nav>
         </Dialog.Content>
