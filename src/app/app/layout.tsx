@@ -4,6 +4,7 @@ import { ReactNode } from 'react'
 import { NavigationDesktop } from './utils/components/navigation/NavigationDesktop'
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import { NavigationTablet } from './utils/components/navigation/NavigationTablet'
 
 interface DashboardLayoutProps {
   children: ReactNode
@@ -19,7 +20,8 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <NavigationDesktop />
+      {/* <NavigationDesktop /> */}
+      <NavigationTablet />
 
       <main className="overflow-y-auto w-full h-full">
         <AnimatePresence mode="wait">

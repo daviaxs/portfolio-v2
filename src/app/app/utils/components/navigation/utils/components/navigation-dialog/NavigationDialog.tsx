@@ -3,7 +3,7 @@ import { ArrowRight, X } from 'lucide-react'
 import './navigationDialog.style.css'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { GetDesktopIcon } from '../../GetDesktopIcon'
+import { GetDesktopAndTabletIcon } from '../../GetDesktopAndTabletIcon'
 import { navigationLinks } from '../../../navigationLinks'
 
 const desktopLinks = navigationLinks.filter(
@@ -36,19 +36,22 @@ export function NavigationDialog() {
           </header>
 
           <nav className="flex flex-col items-center justify-start w-full gap-4 py-4 px-6 overflow-y-auto">
-            {desktopLinks.map((link) => (
-              <Dialog.Close asChild key={link.link}>
+            {desktopLinks.map((page) => (
+              <Dialog.Close asChild key={page.link}>
                 <Link
-                  href={link.link}
-                  className={`w-full p-3 rounded-lg flex items-center justify-start gap-4 transition-colors text-center ${pathName === link.link ? 'bg-violet-400' : 'hover:bg-grey-500'}`}
+                  href={page.link}
+                  className={`w-full p-3 rounded-lg flex items-center justify-start gap-4 transition-colors text-center ${pathName === page.link ? 'bg-violet-400' : 'hover:bg-grey-500'}`}
                 >
                   <span
-                    className={`${pathName === link.link ? '' : 'opacity-50'}`}
+                    className={`${pathName === page.link ? '' : 'opacity-50'}`}
                   >
-                    {GetDesktopIcon(link.icon)}
+                    {GetDesktopAndTabletIcon({
+                      iconName: page.icon,
+                      mode: 'desktop',
+                    })}
                   </span>
 
-                  <p className="font-extrabold text-[1.1rem]">{link.title}</p>
+                  <p className="font-extrabold text-[1.1rem]">{page.title}</p>
                 </Link>
               </Dialog.Close>
             ))}

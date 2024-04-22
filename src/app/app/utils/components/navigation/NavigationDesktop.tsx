@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import { NavigationDialog } from './utils/components/navigation-dialog/NavigationDialog'
-import { GetDesktopIcon } from './utils/GetDesktopIcon'
+import { GetDesktopAndTabletIcon } from './utils/GetDesktopAndTabletIcon'
 import { MouseEvent, useState } from 'react'
 
 const desktopLinks = navigationLinks.filter(
@@ -46,7 +46,10 @@ export function NavigationDesktop() {
                   <span
                     className={`${pathName === page.link ? '' : 'opacity-50'}`}
                   >
-                    {GetDesktopIcon(page.icon)}
+                    {GetDesktopAndTabletIcon({
+                      iconName: page.icon,
+                      mode: 'desktop',
+                    })}
                   </span>
                 </Link>
               </Tooltip.Trigger>
