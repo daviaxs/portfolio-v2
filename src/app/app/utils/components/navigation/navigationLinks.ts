@@ -1,10 +1,10 @@
 export type GetNavigationIconProps =
   | 'home'
-  | 'pages'
   | 'about'
   | 'projects'
   | 'contact'
   | 'settings'
+  | 'more'
 
 type LinkType = {
   link: string
@@ -27,12 +27,6 @@ export const navigationLinks: LinkType[] = [
     tabletAndMobileTitle: 'Sobre',
   },
   {
-    link: '/app/pages',
-    icon: 'pages',
-    title: 'Páginas',
-    tabletAndMobileTitle: 'Páginas',
-  },
-  {
     link: '/app/projects',
     icon: 'projects',
     title: 'Projetos',
@@ -49,5 +43,11 @@ export const navigationLinks: LinkType[] = [
     icon: 'settings',
     title: 'Configurações',
     tabletAndMobileTitle: 'Config',
+  },
+  {
+    link: '/app/more',
+    icon: 'more',
+    title: 'Mais',
+    tabletAndMobileTitle: 'Mais',
   },
 ]

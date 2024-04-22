@@ -8,9 +8,7 @@ import { NavigationDialog } from './utils/components/navigation-dialog/Navigatio
 import { GetDesktopAndTabletIcon } from './utils/GetDesktopAndTabletIcon'
 import { MouseEvent, useState } from 'react'
 
-const desktopLinks = navigationLinks.filter(
-  (link) => link.link !== '/app/pages',
-)
+const desktopLinks = navigationLinks.filter((link) => link.link !== '/app/more')
 
 export function NavigationDesktop() {
   const [isNavigation, setIsNavigation] = useState(false)

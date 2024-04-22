@@ -8,7 +8,7 @@ import { MouseEvent, useState } from 'react'
 import { Retangle } from './utils/Retangle'
 import { motion } from 'framer-motion'
 
-const mobileLinks = navigationLinks.filter((link) => link.link !== '/app/pages')
+const tabletLinks = navigationLinks.filter((link) => link.link !== '/app/more')
 
 export function NavigationTablet() {
   const [isNavigation, setIsNavigation] = useState(false)
@@ -28,7 +28,7 @@ export function NavigationTablet() {
   return (
     <menu className="h-fit w-full bg-grey-700 border-grey-500 flex items-center justify-center absolute rounded-tr-lg rounded-tl-lg bottom-0 px-4 py-2">
       <nav className="flex items-end justify-between w-full gap-4 overflow-hidden">
-        {mobileLinks.map((page) => (
+        {tabletLinks.map((page) => (
           <Link
             key={page.link}
             href={page.link}

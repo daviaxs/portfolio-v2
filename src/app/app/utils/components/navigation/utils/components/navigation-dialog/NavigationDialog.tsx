@@ -6,9 +6,7 @@ import { usePathname } from 'next/navigation'
 import { GetDesktopAndTabletIcon } from '../../GetDesktopAndTabletIcon'
 import { navigationLinks } from '../../../navigationLinks'
 
-const desktopLinks = navigationLinks.filter(
-  (link) => link.link !== '/app/pages',
-)
+const desktopLinks = navigationLinks.filter((link) => link.link !== '/app/more')
 
 export function NavigationDialog() {
   const pathName = usePathname()
