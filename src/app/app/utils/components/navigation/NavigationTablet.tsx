@@ -35,8 +35,12 @@ export function NavigationTablet() {
             onClick={(event) => handleNavigation(event)}
             className="w-fit rounded-lg flex items-center justify-center transition-colors text-center"
           >
-            <span
-              className={`flex flex-col items-center justify-end gap-1 ${pathName === page.link || page.icon === 'projects' ? '' : 'opacity-70'}`}
+            <div
+              className={`
+              flex flex-col items-center justify-end gap-1 
+              ${pathName === page.link || page.icon === 'projects' ? '' : 'opacity-70'} 
+              ${page.icon === 'projects' ? 'ml-4' : ''}
+            `}
             >
               {pathName === page.link && page.icon !== 'projects' && (
                 <motion.span
@@ -57,7 +61,7 @@ export function NavigationTablet() {
               >
                 {page.tabletAndMobileTitle}
               </p>
-            </span>
+            </div>
           </Link>
         ))}
       </nav>
