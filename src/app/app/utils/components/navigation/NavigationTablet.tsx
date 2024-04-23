@@ -39,7 +39,6 @@ export function NavigationTablet() {
               className={`
               flex flex-col items-center justify-end gap-1 
               ${pathName === page.link || page.icon === 'projects' ? '' : 'opacity-70'} 
-              ${page.icon === 'projects' ? 'ml-4' : ''}
             `}
             >
               {pathName === page.link && page.icon !== 'projects' && (
@@ -66,7 +65,7 @@ export function NavigationTablet() {
         ))}
       </nav>
 
-      <Retangle className="absolute bottom-[3.6rem] z-[-1]" />
+      <Retangle className="absolute bottom-[3.6rem] z-[-1] mr-4" />
     </menu>
   )
 }
