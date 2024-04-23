@@ -44,10 +44,4 @@ export const navigationLinks: LinkType[] = [
     title: 'Configurações',
     tabletAndMobileTitle: 'Config',
   },
-  {
-    link: '/app/more',
-    icon: 'more',
-    title: 'Mais',
-    tabletAndMobileTitle: 'Mais',
-  },
 ]
