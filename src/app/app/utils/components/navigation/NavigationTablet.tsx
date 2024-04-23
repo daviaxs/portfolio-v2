@@ -8,7 +8,7 @@ import { MouseEvent, useState } from 'react'
 import { Retangle } from './utils/Retangle'
 import { motion } from 'framer-motion'
 
-const tabletLinks = navigationLinks.filter((link) => link.link !== '/app/more')
+const tabletLinks = navigationLinks.filter((page) => page.link !== '/app/more')
 
 export function NavigationTablet() {
   const [isNavigation, setIsNavigation] = useState(false)
@@ -33,34 +33,30 @@ export function NavigationTablet() {
             key={page.link}
             href={page.link}
             onClick={(event) => handleNavigation(event)}
-            className="w-fit rounded-lg flex items-center justify-center transition-colors text-center"
-          >
-            <div
-              className={`
-              flex flex-col items-center justify-end gap-1 
-              ${pathName === page.link || page.icon === 'projects' ? '' : 'opacity-70'} 
+            className={`
+              w-fit rounded-lg flex flex-col items-center justify-center transition-colors text-center
+              ${pathName === page.link || page.icon === 'projects' ? '' : 'opacity-70'}
             `}
+          >
+            {pathName === page.link && page.icon !== 'projects' && (
+              <motion.span
+                className="h-1 w-full rounded-full bg-green-400 mb-1"
+                initial={{ width: 0 }}
+                animate={{ width: '100%' }}
+                transition={{ duration: 0.3 }}
+              />
+            )}
+
+            {GetDesktopAndTabletIcon({
+              iconName: page.icon,
+              mode: 'tablet',
+            })}
+
+            <p
+              className={`font-medium text-sm ${page.icon === 'projects' && pathName !== '/app/projects' ? 'opacity-70' : ''}`}
             >
-              {pathName === page.link && page.icon !== 'projects' && (
-                <motion.span
-                  className="h-1 w-full rounded-full bg-green-400 mb-1"
-                  initial={{ width: 0 }}
-                  animate={{ width: '100%' }}
-                  transition={{ duration: 0.3 }}
-                />
-              )}
-
-              {GetDesktopAndTabletIcon({
-                iconName: page.icon,
-                mode: 'tablet',
-              })}
-
-              <p
-                className={`font-medium text-sm ${page.icon === 'projects' && pathName !== '/app/projects' ? 'opacity-70' : ''}`}
-              >
-                {page.tabletAndMobileTitle}
-              </p>
-            </div>
+              {page.tabletAndMobileTitle}
+            </p>
           </Link>
         ))}
       </nav>
