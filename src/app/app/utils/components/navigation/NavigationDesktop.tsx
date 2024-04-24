@@ -8,7 +8,7 @@ import { NavigationDialog } from './utils/components/navigation-dialog/Navigatio
 import { GetDesktopAndTabletIcon } from './utils/GetDesktopAndTabletIcon'
 import { MouseEvent, useState } from 'react'
 
-const desktopLinks = navigationLinks.filter((link) => link.link !== '/app/more')
+const desktopLinks = navigationLinks.filter((page) => page.link !== '/app/more')
 
 export function NavigationDesktop() {
   const [isNavigation, setIsNavigation] = useState(false)
@@ -26,7 +26,7 @@ export function NavigationDesktop() {
   }
 
   return (
-    <aside className="h-full w-[5rem] bg-grey-900 border-r-[1px] border-grey-500 flex flex-col items-center justify-start">
+    <aside className="h-full w-[5rem] bg-grey-900 border-r-[1px] border-grey-500 flex flex-col items-center justify-start z-10">
       <header className="border-b-[1px] border-grey-500 w-full py-4 flex items-center justify-center">
         <NavigationDialog />
       </header>

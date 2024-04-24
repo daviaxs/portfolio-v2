@@ -4,13 +4,18 @@ import { navigationLinks } from './navigationLinks'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { GetDesktopAndTabletIcon } from './utils/GetDesktopAndTabletIcon'
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { MouseEvent, useState } from 'react'
 import { Retangle } from './utils/Retangle'
 import { motion } from 'framer-motion'
+import { AlignJustify } from 'lucide-react'
+import './navigationMobile.style.css'
 
-const tabletLinks = navigationLinks.filter((page) => page.link !== '/app/more')
+const mobileLinks = navigationLinks.filter(
+  (page) => page.link === '/app/about' || page.link === '/app/projects',
+)
 
-export function NavigationTablet() {
+export function NavigationMobile() {
   const [isNavigation, setIsNavigation] = useState(false)
   const pathName = usePathname()
 
@@ -26,9 +31,9 @@ export function NavigationTablet() {
   }
 
   return (
-    <menu className="h-fit w-full bg-grey-700 border-grey-500 flex items-center justify-center absolute rounded-tr-lg rounded-tl-lg bottom-0 px-4 py-2 z-10">
+    <menu className="h-fit w-full bg-grey-700 border-grey-500 flex items-center absolute justify-center rounded-tr-lg rounded-tl-lg bottom-0 px-4 py-2 z-10">
       <nav className="flex items-end justify-between w-full gap-4 overflow-hidden">
-        {tabletLinks.map((page) => (
+        {mobileLinks.map((page) => (
           <Link
             key={page.link}
             href={page.link}
@@ -59,9 +64,28 @@ export function NavigationTablet() {
             </p>
           </Link>
         ))}
+
+        <DropdownMenu.Root>
+          <DropdownMenu.Trigger asChild>
+            <button className="w-fit rounded-lg flex flex-col items-center justify-center transition-colors text-center outline-none gap-1">
+              <AlignJustify size={25} />
+
+              <p className="font-medium text-sm opacity-70">Mais</p>
+            </button>
+          </DropdownMenu.Trigger>
+
+          <DropdownMenu.Portal>
+            <DropdownMenu.Content
+              sideOffset={50}
+              className="bg-grey-800 border border-grey-500 rounded w-full DropdownMenuContent"
+            >
+              fwagwag
+            </DropdownMenu.Content>
+          </DropdownMenu.Portal>
+        </DropdownMenu.Root>
       </nav>
 
-      <Retangle className="absolute bottom-[3.6rem] z-[-1] mr-4" />
+      <Retangle className="absolute bottom-[3.6rem] z-[-1]" />
     </menu>
   )
 }

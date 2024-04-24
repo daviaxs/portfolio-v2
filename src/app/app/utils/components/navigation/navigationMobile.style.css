@@ -1,0 +1,42 @@
+.DropdownMenuContent {
+  background-color: #111111;
+  border: 1px solid #1F1F1F;
+  border-radius: 6px;
+  
+  min-width: 95vw;
+  padding: 5px;
+
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.DropdownMenuContent[data-side='top']{
+  animation-name: slideDownAndFade;
+}
+
+.DropdownMenuContent[data-state='closed'] {
+  animation-name: slideUpAndFade;
+}
+
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpAndFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
