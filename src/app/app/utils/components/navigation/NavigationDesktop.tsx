@@ -34,7 +34,7 @@ export function NavigationDesktop() {
       <nav className="flex flex-col items-center justify-start w-full gap-4 overflow-y-auto py-4">
         {desktopLinks.map((page) => (
           <Tooltip.Provider key={page.link}>
-            <Tooltip.Root delayDuration={400}>
+            <Tooltip.Root delayDuration={600}>
               <Tooltip.Trigger>
                 <Link
                   href={page.link}
@@ -54,7 +54,7 @@ export function NavigationDesktop() {
               <Tooltip.Portal>
                 <Tooltip.Content
                   side="left"
-                  className="bg-grey-500 p-2 rounded ml-2 font-semibold text-[1rem]"
+                  className="bg-grey-500 border border-grey-400/50 p-2 rounded ml-5 font-semibold text-[1rem]"
                 >
                   {page.title}
                 </Tooltip.Content>
