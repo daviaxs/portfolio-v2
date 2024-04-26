@@ -1,0 +1,64 @@
+button,
+fieldset,
+input {
+  all: unset;
+}
+
+.MoreLinksDialogOverlay {
+  background: #00000000;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 999;
+}
+
+.MoreLinksDialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  outline: none;
+
+  width: 100%;
+  height: 70vh;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transform: translateY(0);
+  z-index: 999;
+
+  background-color: #0D0D0D;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-top: 1px solid #1F1F1F;
+
+  &[data-state='open'] {
+    animation: contentShowPosition 0.4s ease-in-out;
+  }
+
+  &[data-state='closed'] {
+    animation: contentHidePosition 0.4s ease-in-out;
+  }
+}
+
+@keyframes contentShowPosition {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentHidePosition {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+

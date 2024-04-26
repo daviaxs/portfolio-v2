@@ -4,12 +4,11 @@ import { navigationLinks } from './navigationLinks'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { GetDesktopAndTabletIcon } from './utils/GetDesktopAndTabletIcon'
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { MouseEvent, useState } from 'react'
 import { Retangle } from './utils/Retangle'
 import { motion } from 'framer-motion'
-import { AlignJustify } from 'lucide-react'
 import './navigationMobile.style.css'
+import { MoreLinksDialog } from './utils/components/more-links-dialog/MoreLinksDialog'
 
 const mobileLinks = navigationLinks.filter(
   (page) => page.link === '/app/about' || page.link === '/app/projects',
@@ -65,24 +64,7 @@ export function NavigationMobile() {
           </Link>
         ))}
 
-        <DropdownMenu.Root>
-          <DropdownMenu.Trigger asChild>
-            <button className="w-[35px] rounded-lg  cursor-pointer flex flex-col items-center justify-center transition-colors text-center outline-none gap-1">
-              <AlignJustify size={25} />
-
-              <p className="font-medium text-sm opacity-70">Mais</p>
-            </button>
-          </DropdownMenu.Trigger>
-
-          <DropdownMenu.Portal>
-            <DropdownMenu.Content
-              sideOffset={50}
-              className="bg-grey-800 border border-grey-500 rounded w-full DropdownMenuContent"
-            >
-              fwagwag
-            </DropdownMenu.Content>
-          </DropdownMenu.Portal>
-        </DropdownMenu.Root>
+        <MoreLinksDialog />
       </nav>
 
       <Retangle className="absolute bottom-[3.6rem] z-[-1]" />
