@@ -34,7 +34,7 @@ export function NavigationTablet() {
             href={page.link}
             onClick={(event) => handleNavigation(event)}
             className={`
-              w-fit rounded-lg flex flex-col items-center justify-center transition-colors text-center
+              w-[40px] rounded-lg flex flex-col items-center justify-center transition-colors text-center
               ${pathName === page.link || page.icon === 'projects' ? '' : 'opacity-70'}
             `}
           >
@@ -61,7 +61,7 @@ export function NavigationTablet() {
         ))}
       </nav>
 
-      <Retangle className="absolute bottom-[3.6rem] z-[-1] mr-4" />
+      <Retangle className="absolute bottom-[3.6rem] z-[-1]" />
     </menu>
   )
 }

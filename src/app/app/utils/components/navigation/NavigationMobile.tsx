@@ -39,7 +39,7 @@ export function NavigationMobile() {
             href={page.link}
             onClick={(event) => handleNavigation(event)}
             className={`
-              w-fit rounded-lg flex flex-col items-center justify-center transition-colors text-center
+              w-[35px] rounded-lg flex flex-col items-center justify-center transition-colors text-center
               ${pathName === page.link || page.icon === 'projects' ? '' : 'opacity-70'}
             `}
           >
@@ -67,7 +67,7 @@ export function NavigationMobile() {
 
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
-            <button className="w-fit rounded-lg  cursor-pointer flex flex-col items-center justify-center transition-colors text-center outline-none gap-1">
+            <button className="w-[35px] rounded-lg  cursor-pointer flex flex-col items-center justify-center transition-colors text-center outline-none gap-1">
               <AlignJustify size={25} />
 
               <p className="font-medium text-sm opacity-70">Mais</p>
