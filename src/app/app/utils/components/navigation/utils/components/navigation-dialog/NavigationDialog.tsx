@@ -1,5 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { ArrowRight, X } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import './navigationDialog.style.css'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -28,7 +28,7 @@ export function NavigationDialog() {
 
             <Dialog.Close asChild>
               <div className="hover:bg-grey-500 p-2 rounded-full cursor-pointer transition-colors w-fit">
-                <X size={25} />
+                <ArrowLeft size={25} />
               </div>
             </Dialog.Close>
           </header>
