@@ -1,7 +1,9 @@
+import ParticleComponent from './utils/components/particles/Particles'
+
 export default function HomePage() {
   return (
     <div>
-      <p>Página inicial</p>
+      <ParticleComponent />
     </div>
   )
 }
