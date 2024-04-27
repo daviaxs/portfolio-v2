@@ -40,7 +40,7 @@ export function NavigationTablet() {
           >
             {pathName === page.link && page.icon !== 'projects' && (
               <motion.span
-                className="h-1 w-full rounded-full bg-green-400 mb-2"
+                className="h-1 w-full rounded-full bg-violet-400 mb-2"
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 0.3 }}
