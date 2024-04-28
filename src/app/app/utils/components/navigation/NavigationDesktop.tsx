@@ -26,7 +26,7 @@ export function NavigationDesktop() {
   }
 
   return (
-    <aside className="h-full w-[5rem] bg-grey-900 border-r-[1px] border-grey-500 flex flex-col items-center justify-start z-10">
+    <aside className="h-full w-[5rem] bg-grey-900 border-r-[1px] border-grey-500 flex flex-col items-center justify-start z-20">
       <header className="border-b-[1px] border-grey-500 w-full py-4 flex items-center justify-center">
         <NavigationDialog />
       </header>
