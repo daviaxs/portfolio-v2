@@ -1,6 +1,10 @@
 import { WavingHand } from '@/shared/assets/svgs/WavingHand'
 import DaviAXSDesenhoViolet from '@/shared/assets/imgs/daviaxs-desenho-violet.png'
 import Image from 'next/image'
+import { ButtonSocialMedia } from '@/shared/components/button-social-media/ButtonSocialMedia'
+import { Github } from 'lucide-react'
+import { Discord } from '@/shared/assets/svgs/Discord'
+import { Linkedin } from '@/shared/assets/svgs/Linkedin'
 
 export default function HomePage() {
   return (
@@ -26,6 +30,20 @@ export default function HomePage() {
               Desenvolvedor Fullstack
             </p>
           </div>
+        </div>
+
+        <div className="w-full flex items-center justify-center gap-4">
+          <ButtonSocialMedia href="https://github.com/daviaxs">
+            <Github size={31} />
+          </ButtonSocialMedia>
+
+          <ButtonSocialMedia href="https://discord.com/users/852904928166281248">
+            <Discord />
+          </ButtonSocialMedia>
+
+          <ButtonSocialMedia href="https://www.linkedin.com/in/daviaxs/">
+            <Linkedin />
+          </ButtonSocialMedia>
         </div>
       </div>
 
