@@ -19,7 +19,7 @@ export function Navigation() {
     return mobile()
   }
 
-  if (width <= 900) {
+  if (width <= 976) {
     return tablet()
   }
 
