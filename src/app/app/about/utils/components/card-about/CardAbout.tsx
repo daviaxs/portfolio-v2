@@ -19,17 +19,29 @@ export function CardAbout() {
         </div>
       </div>
 
-      <div>
-        Lorem Ipsus is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-        ever since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-      </div>
+      <p>
+        Olá, seja bem-vindo ao meu mundo digital! Me chamo Davi e tenho a paixão
+        de criar experiências incríveis para as pessoas através da programação.
+        Sou um jovem de 18 anos, atualmente desenvolvedor fullstack, porém com
+        foco no front-end.
+        <br />
+        <br />
+        Sou movido por desafios, e é isso que me motiva a buscar sempre o
+        próximo nível em minhas aplicações. Aperfeiçoar cada detalhe, criar
+        interfaces intuitivas e dinâmicas, além de proporcionar uma experiência
+        única ao usuário, são alguns dos meus objetivos.
+        <br />
+        <br />
+        Estou sempre em busca de novos conhecimentos e tecnologias que possam
+        aprimorar minhas habilidades e trazer ainda mais qualidade às minhas
+        aplicações. Busco constantemente me atualizar em relação às tendências
+        do mercado e estar sempre um passo à frente.
+        <br />
+        <br />
+        Fique à vontade para navegar pelo meu portfólio e conferir alguns dos
+        meus projetos. E se precisar de ajuda para criar algo inovador e
+        desafiador, entre em contato comigo agora mesmo!
+      </p>
     </div>
   )
 }
