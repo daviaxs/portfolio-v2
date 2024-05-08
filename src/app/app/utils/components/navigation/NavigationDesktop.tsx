@@ -54,7 +54,7 @@ export function NavigationDesktop() {
               <Tooltip.Portal>
                 <Tooltip.Content
                   side="left"
-                  className="bg-grey-500 border border-grey-400/50 p-2 rounded ml-5 font-semibold text-[1rem]"
+                  className="bg-grey-500 border border-grey-400/50 p-2 rounded ml-5 font-semibold text-[1rem] z-[999]"
                 >
                   {page.title}
                 </Tooltip.Content>
