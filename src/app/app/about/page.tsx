@@ -1,4 +1,5 @@
 import { CardAbout } from './utils/components/card-about/CardAbout'
+import { MainSkills } from './utils/components/main-skills/MainSkills'
 import { Separator } from './utils/components/separator/Separator'
 
 export default function AboutPage() {
@@ -7,6 +8,8 @@ export default function AboutPage() {
       <CardAbout />
 
       <Separator />
+
+      <MainSkills />
     </div>
   )
 }
