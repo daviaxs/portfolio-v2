@@ -55,7 +55,7 @@ export default function HomePage() {
         className="lg:h-[75%] object-contain pointer-events-none max-lg:h-fit w-[30rem]"
       />
 
-      <span className="lg:hidden">ㅤ</span>
+      <span className="lg:hidden opacity-0">.</span>
     </div>
   )
 }
