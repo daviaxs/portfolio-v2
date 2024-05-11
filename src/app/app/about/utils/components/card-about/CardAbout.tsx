@@ -3,9 +3,11 @@ import DaviAxsDesenho from '@/shared/assets/imgs/daviaxs-desenho-com-bg.png'
 
 export function CardAbout() {
   return (
-    <div className="flex flex-col w-full h-fit p-5 gap-3 rounded bg-grey-800 border border-grey-500">
+    <div className="flex flex-col w-full h-fit p-5 gap-3 sm:rounded bg-grey-800 border border-grey-500">
       <div className="w-full h-fit flex gap-4 items-start">
-        <div className="relative w-[5.5rem] h-[5.5rem] rounded-full bg-gradient-to-r from-[#0085ff] via-[#a143ff] to-[#ff8383] z-0">
+        <div className="relative min-w-[5.5rem] min-h-[5.5rem]">
+          <div className="absolute min-w-[5.5rem] min-h-[5.5rem] rounded-full bg-gradient-to-r from-[#0085ff] via-[#a143ff] to-[#ff8383] z-0 animate-pulse" />
+
           <Image
             src={DaviAxsDesenho}
             alt="avatar"
@@ -13,8 +15,10 @@ export function CardAbout() {
           />
         </div>
 
-        <div className="flex flex-col items-start gap-1">
-          <h4 className="font-bold text-[2.5rem] leading-[100%]">Sobre mim</h4>
+        <div className="flex flex-col items-start gap-1 mt-1">
+          <h4 className="font-bold text-[2.5rem] leading-[100%] max-sm:text-[1.8rem]">
+            Sobre mim
+          </h4>
           <span className="h-[8px] w-[60%] bg-grey-500 rounded-full" />
         </div>
       </div>
