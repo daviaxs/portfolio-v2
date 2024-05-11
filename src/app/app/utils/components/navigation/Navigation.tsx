@@ -15,11 +15,11 @@ export function Navigation() {
   const { width } = useWindowWidth()
   const { mobile, desktop, tablet } = navigationComponents
 
-  if (width <= 450) {
+  if (width < 450) {
     return mobile()
   }
 
-  if (width <= 976) {
+  if (width < 976) {
     return tablet()
   }
 
