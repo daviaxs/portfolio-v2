@@ -1,4 +1,6 @@
+import { TypeScript } from '@/shared/assets/svgs/TypeScript'
 import { TechCard } from './utils/components'
+import { ReactIcon } from '@/shared/assets/svgs/React'
 
 export function MainSkills() {
   return (
@@ -8,22 +10,26 @@ export function MainSkills() {
       <div className="w-full flex items-center justify-between gap-4">
         <TechCard.Root type="primary">
           <TechCard.Content>
-            <TechCard.Img />
+            <TechCard.Img blurColor="#007ACC">
+              <TypeScript />
+            </TechCard.Img>
 
             <TechCard.Texts
-              title="React"
-              description="Biblioteca JavaScript para construção de interfaces de usuário."
+              title="TypeScript"
+              description=" É uma versão de JavaScript com verificação de tipo estático, oferecendo um conjunto mais robusto de ferramentas para desenvolvimento em larga escala."
             />
           </TechCard.Content>
         </TechCard.Root>
 
         <TechCard.Root type="secondary">
           <TechCard.Content>
-            <TechCard.Img />
+            <TechCard.Img blurColor="#00D8FF">
+              <ReactIcon />
+            </TechCard.Img>
 
             <TechCard.Texts
-              title="TypeScript"
-              description="Superset JavaScript que adiciona tipagem estática ao código."
+              title="React"
+              description="É uma biblioteca JavaScript para criar interfaces de usuário eficientes e reutilizáveis, ideal para aplicações de página única."
             />
           </TechCard.Content>
         </TechCard.Root>
