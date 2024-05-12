@@ -2,6 +2,15 @@ import Image from 'next/image'
 import DaviAxsDesenho from '@/shared/assets/imgs/daviaxs-desenho-com-bg.png'
 
 export function CardAbout() {
+  function getYearsOld() {
+    const birthDate = new Date('2006-01-14')
+    const currentDate = new Date()
+    const diff = currentDate.getTime() - birthDate.getTime()
+    const ageDate = new Date(diff)
+
+    return Math.abs(ageDate.getUTCFullYear() - 1970)
+  }
+
   return (
     <div className="flex flex-col w-full h-fit p-5 gap-3 sm:rounded bg-grey-800 border border-grey-500">
       <div className="w-full h-fit flex gap-4 items-start">
@@ -26,8 +35,8 @@ export function CardAbout() {
       <p>
         Olá, seja bem-vindo ao meu mundo digital! Me chamo Davi e tenho a paixão
         de criar experiências incríveis para as pessoas através da programação.
-        Sou um jovem de 18 anos, atualmente desenvolvedor fullstack, porém com
-        foco no front-end.
+        Sou um jovem de {getYearsOld()} anos, atualmente desenvolvedor
+        fullstack, porém com foco no front-end.
         <br />
         <br />
         Sou movido por desafios, e é isso que me motiva a buscar sempre o
