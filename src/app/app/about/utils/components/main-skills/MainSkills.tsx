@@ -6,8 +6,8 @@ export function MainSkills() {
       <h2 className="font-extrabold text-[2rem]">Principais Habilidades</h2>
 
       <div className="w-full flex items-center justify-between gap-4">
-        <TechCard />
-        <TechCard />
+        <TechCard type="primary" />
+        <TechCard type="secondary" />
       </div>
     </div>
   )
