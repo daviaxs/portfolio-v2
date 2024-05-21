@@ -5,5 +5,9 @@ interface JobTagsProps {
 }
 
 export function JobTags({ children }: JobTagsProps) {
-  return <div className="flex items-start justify-start gap-2">{children}</div>
+  return (
+    <div className="flex flex-wrap items-start justify-start gap-2">
+      {children}
+    </div>
+  )
 }
