@@ -27,6 +27,14 @@ export function ExperienceOverview() {
             </ExperienceCard.Job.JobDetails>
           </ExperienceCard.Content>
 
+          <ExperienceCard.Job.JobDescription>
+            Durante o projeto, fui responsável por desenvolver todas as etapas,
+            desde o layout até o front-end e back-end da aplicação. Trata-se de
+            um projeto completo, abrangendo desde a página inicial, onde o
+            cliente pode selecionar o pedido desejado, até uma dashboard para o
+            administrador do site.
+          </ExperienceCard.Job.JobDescription>
+
           <ExperienceCard.Job.JobTags>
             <ExperienceCard.Job.JobTag name="React JS" />
             <ExperienceCard.Job.JobTag name="NextJS 14" />
