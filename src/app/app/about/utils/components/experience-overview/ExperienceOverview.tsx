@@ -11,9 +11,9 @@ export function ExperienceOverview() {
 
       <div className="flex flex-col items-start justify-start gap-4 w-full">
         <ExperienceCard.Root>
-          <ExperienceImg src={SpiderLinkImg} alt="image" />
-
           <ExperienceCard.Content>
+            <ExperienceImg src={SpiderLinkImg} alt="image" />
+
             <ExperienceCard.Job.JobDetails
               company="SpiderLink"
               jobType="Freelance"
@@ -25,26 +25,26 @@ export function ExperienceOverview() {
                 Developer
               </ExperienceCard.Job.JobDetailsTitle>
             </ExperienceCard.Job.JobDetails>
-
-            <ExperienceCard.Job.JobTags>
-              <ExperienceCard.Job.JobTag name="React JS" />
-              <ExperienceCard.Job.JobTag name="NextJS 14" />
-              <ExperienceCard.Job.JobTag name="TypeScript" />
-              <ExperienceCard.Job.JobTag name="Node" />
-              <ExperienceCard.Job.JobTag name="Styled Components" />
-              <ExperienceCard.Job.JobTag name="Radix UI" />
-              <ExperienceCard.Job.JobTag name="Fastify" />
-              <ExperienceCard.Job.JobTag name="Cloudinary" />
-              <ExperienceCard.Job.JobTag name="Prisma" />
-              <ExperienceCard.Job.JobTag name="Zod" />
-            </ExperienceCard.Job.JobTags>
           </ExperienceCard.Content>
+
+          <ExperienceCard.Job.JobTags>
+            <ExperienceCard.Job.JobTag name="React JS" />
+            <ExperienceCard.Job.JobTag name="NextJS 14" />
+            <ExperienceCard.Job.JobTag name="TypeScript" />
+            <ExperienceCard.Job.JobTag name="Node" />
+            <ExperienceCard.Job.JobTag name="Styled Components" />
+            <ExperienceCard.Job.JobTag name="Radix UI" />
+            <ExperienceCard.Job.JobTag name="Fastify" />
+            <ExperienceCard.Job.JobTag name="Cloudinary" />
+            <ExperienceCard.Job.JobTag name="Prisma" />
+            <ExperienceCard.Job.JobTag name="Zod" />
+          </ExperienceCard.Job.JobTags>
         </ExperienceCard.Root>
 
         <ExperienceCard.Root>
-          <ExperienceImg src={VectorImg} alt="image" />
-
           <ExperienceCard.Content>
+            <ExperienceImg src={VectorImg} alt="image" />
+
             <ExperienceCard.Job.JobDetails
               company="Moldrin"
               jobType="Freelance"
@@ -56,12 +56,12 @@ export function ExperienceOverview() {
                 Editor
               </ExperienceCard.Job.JobDetailsTitle>
             </ExperienceCard.Job.JobDetails>
-
-            <ExperienceCard.Job.JobTags>
-              <ExperienceCard.Job.JobTag name="Adobe Photoshop" />
-              <ExperienceCard.Job.JobTag name="Adobe After Effects" />
-            </ExperienceCard.Job.JobTags>
           </ExperienceCard.Content>
+
+          <ExperienceCard.Job.JobTags>
+            <ExperienceCard.Job.JobTag name="Adobe Photoshop" />
+            <ExperienceCard.Job.JobTag name="Adobe After Effects" />
+          </ExperienceCard.Job.JobTags>
         </ExperienceCard.Root>
       </div>
     </div>
