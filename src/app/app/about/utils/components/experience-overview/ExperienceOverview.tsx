@@ -30,8 +30,8 @@ export function ExperienceOverview() {
           <ExperienceCard.Job.JobDescription>
             Durante o projeto na SpiderLink, fui responsável por desenvolver
             todas as etapas, desde o layout até o front-end e back-end da
-            aplicação. O produto se trata de um modelo único de site para
-            vendas. A aplicação inclui uma página inicial onde os clientes podem
+            aplicação. O produto se trata de um modelo único para venda de
+            sites. A aplicação inclui uma página inicial onde os clientes podem
             selecionar seus pedidos e uma dashboard totalmente editável para o
             administrador do site, permitindo adicionar, editar ou remover
             produtos, entre outras customizações.
