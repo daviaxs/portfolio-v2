@@ -2,6 +2,7 @@ import Image from 'next/image'
 import ImgNotLoad from './img-not-load-base.png'
 import { Button } from '@/shared/components/button'
 import { Github, Rocket } from 'lucide-react'
+import Link from 'next/link'
 
 export function ProjectCard() {
   return (
@@ -37,19 +38,23 @@ export function ProjectCard() {
         </div>
 
         <div className="flex flex-wrap items-start justify-start gap-4">
-          <Button.Root variant="small" color="violet">
-            <Button.Text>Deploy</Button.Text>
-            <Button.Icon>
-              <Rocket />
-            </Button.Icon>
-          </Button.Root>
+          <Link href={''}>
+            <Button.Root variant="small" color="violet">
+              <Button.Text>Deploy</Button.Text>
+              <Button.Icon>
+                <Rocket />
+              </Button.Icon>
+            </Button.Root>
+          </Link>
 
-          <Button.Root variant="small" color="violet">
-            <Button.Text>Github</Button.Text>
-            <Button.Icon>
-              <Github />
-            </Button.Icon>
-          </Button.Root>
+          <Link href={''}>
+            <Button.Root variant="small" color="violet">
+              <Button.Text>Github</Button.Text>
+              <Button.Icon>
+                <Github />
+              </Button.Icon>
+            </Button.Root>
+          </Link>
         </div>
       </div>
     </div>
