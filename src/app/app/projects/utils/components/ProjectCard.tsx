@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import ImgNotLoad from './img-not-load-base.png'
+import { Button } from '@/shared/components/button'
+import { Github, Rocket } from 'lucide-react'
 
 export function ProjectCard() {
   return (
@@ -32,6 +34,22 @@ export function ProjectCard() {
 
             <p className="font-bold">ReactJS</p>
           </div>
+        </div>
+
+        <div className="flex flex-wrap items-start justify-start gap-4">
+          <Button.Root variant="small" color="violet">
+            <Button.Text>Deploy</Button.Text>
+            <Button.Icon>
+              <Rocket />
+            </Button.Icon>
+          </Button.Root>
+
+          <Button.Root variant="small" color="violet">
+            <Button.Text>Github</Button.Text>
+            <Button.Icon>
+              <Github />
+            </Button.Icon>
+          </Button.Root>
         </div>
       </div>
     </div>
