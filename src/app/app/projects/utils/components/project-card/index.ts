@@ -5,10 +5,12 @@ import { ProjectCardImage } from './ProjectCardImage'
 import { ProjectCardRoot } from './ProjectCardRoot'
 import { ProjectCardTech } from './ProjectCardTech'
 import { ProjectCardTechs } from './ProjectCardTechs'
+import { ProjectCardRootFeatured } from './ProjectCardRootFeatured'
 import { ProjectCardTitle } from './ProjectCardTitle'
 
 export const ProjectCard = {
   Root: ProjectCardRoot,
+  RootFeatured: ProjectCardRootFeatured,
   Image: ProjectCardImage,
   Content: ProjectCardContent,
   Title: ProjectCardTitle,
