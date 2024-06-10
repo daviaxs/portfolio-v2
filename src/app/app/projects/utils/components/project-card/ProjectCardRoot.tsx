@@ -6,7 +6,7 @@ interface ProjectCardRootProps {
 
 export function ProjectCardRoot({ children }: ProjectCardRootProps) {
   return (
-    <div className="flex items-start justify-start px-4 py-3 gap-4 w-full h-fit bg-grey-900 border border-grey-500 rounded-lg">
+    <div className="flex items-start justify-start px-4 py-3 gap-4 w-full h-fit bg-grey-900 border border-grey-500 rounded-lg max-md:flex-col max-md:items-center">
       {children}
     </div>
   )

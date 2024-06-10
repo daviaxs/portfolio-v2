@@ -7,5 +7,9 @@ interface ProjectCardDescriptionProps {
 export function ProjectCardDescription({
   children,
 }: ProjectCardDescriptionProps) {
-  return <p className="text-grey-100 font-semibold leading-tight">{children}</p>
+  return (
+    <p className="text-grey-100 font-semibold leading-tight max-md:text-center">
+      {children}
+    </p>
+  )
 }

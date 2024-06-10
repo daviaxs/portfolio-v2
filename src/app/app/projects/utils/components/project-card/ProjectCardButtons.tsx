@@ -12,7 +12,7 @@ export function ProjectCardButtons({
   githubUrl,
 }: ProjectCardButtonsProps) {
   return (
-    <div className="flex flex-wrap items-start justify-start gap-4">
+    <div className="flex items-start justify-start gap-4">
       <Link href={deployUrl} target="_blank">
         <Button.Root variant="small" color="violet">
           <Button.Text>Deploy</Button.Text>
