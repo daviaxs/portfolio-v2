@@ -4,11 +4,13 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode
   variant?: 'small' | 'normal'
   color?: 'blue' | 'violet'
+  disabled?: boolean
 }
 
 export function ButtonRoot({
   variant = 'normal',
   color = 'blue',
+  disabled = false,
   children,
 }: ButtonProps) {
   const childrenWithProps = React.Children.map(children, (child) => {
@@ -22,7 +24,10 @@ export function ButtonRoot({
   })
 
   return (
-    <button className="appearance-none">
+    <button
+      className="appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled={disabled}
+    >
       <div
         className={`flex items-center justify-center border-b-[2px] rounded-lg gap-4 transition-colors
         ${color === 'blue' ? 'bg-blue-600' : 'bg-violet-600'}
