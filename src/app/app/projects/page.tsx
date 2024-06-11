@@ -32,6 +32,8 @@ export default function ProjectsPage() {
             <ProjectCard.Buttons
               deployUrl={project.deployUrl}
               githubUrl={project.githubUrl}
+              deployButtonDisabled={project.deployUrl === ''}
+              githubButtonDisabled={project.githubUrl === ''}
             />
           </ProjectCard.Content>
         </ProjectCard.RootFeatured>
@@ -60,6 +62,8 @@ export default function ProjectsPage() {
             <ProjectCard.Buttons
               deployUrl={project.deployUrl}
               githubUrl={project.githubUrl}
+              deployButtonDisabled={project.deployUrl === ''}
+              githubButtonDisabled={project.githubUrl === ''}
             />
           </ProjectCard.Content>
         </ProjectCard.Root>
