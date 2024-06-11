@@ -1,6 +1,8 @@
+import SpiderLinkImg from '@/shared/assets/imgs/spiderlink-banner.png'
+
 export const ProjectsFeaturedList = [
   {
-    img: '',
+    img: SpiderLinkImg,
     imgAlt: '',
 
     name: 'SpiderLink',
@@ -9,7 +11,7 @@ export const ProjectsFeaturedList = [
 
     techs: ['React', 'Next.js', 'TailwindCSS'],
 
-    deployUrl: 'https://spiderlink.vercel.app',
+    deployUrl: 'https://www.spider-link.pro/',
     githubUrl: '',
   },
 ]
