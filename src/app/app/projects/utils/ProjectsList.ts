@@ -1,4 +1,5 @@
 import DxStoreImg from '@/shared/assets/imgs/dx-store.png'
+import DtMoneyImg from '@/shared/assets/imgs/dt-money.png'
 
 export const ProjectsList = [
   {
@@ -17,5 +18,15 @@ export const ProjectsList = [
     ],
     deployUrl: 'https://dx-store.vercel.app',
     githubUrl: 'https://github.com/daviaxs/DX-Store',
+  },
+  {
+    img: DtMoneyImg,
+    imgAlt: 'dt-money',
+    name: 'DT Money',
+    description:
+      'DT Money é um site de gerenciamento de finanças pessoais com um design intuitivo. Registre suas transações com facilidade, veja entradas, saídas e o saldo total. Mantenha suas finanças sob controle de forma simples.',
+    techs: ['React JS', 'TypeScript', 'Styled Components', 'Zod', 'Radix-ui'],
+    deployUrl: 'https://dt-money-daviaxs.vercel.app',
+    githubUrl: 'https://dt-money-daviaxs.vercel.app',
   },
 ]
