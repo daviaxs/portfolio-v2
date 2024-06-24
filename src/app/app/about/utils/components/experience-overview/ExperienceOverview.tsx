@@ -1,8 +1,8 @@
-import { Title } from '../Title'
 import { ExperienceImg } from './utils/components/ExperienceImg'
 import { ExperienceCard } from './utils/components/index'
 import VectorImg from '@/shared/assets/imgs/vector-img-gradient.png'
 import SpiderLinkImg from '@/shared/assets/imgs/spiderlink-img.png'
+import { Title } from '@/app/app/utils/components/Title'
 
 export function ExperienceOverview() {
   return (
