@@ -5,12 +5,14 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   variant?: 'small' | 'normal'
   color?: 'blue' | 'violet'
   disabled?: boolean
+  type?: 'button' | 'submit' | 'reset'
 }
 
 export function ButtonRoot({
   variant = 'normal',
   color = 'blue',
   disabled = false,
+  type = 'button',
   children,
 }: ButtonProps) {
   const childrenWithProps = React.Children.map(children, (child) => {
@@ -26,6 +28,7 @@ export function ButtonRoot({
   return (
     <button
       className="appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
+      type={type}
       disabled={disabled}
     >
       <div
