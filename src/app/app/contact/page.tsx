@@ -1,7 +1,11 @@
-import { Mail, MessageCircleMore, User } from 'lucide-react'
+import { Github, Mail, MessageCircleMore, Send, User } from 'lucide-react'
 import { Title } from '../utils/components/Title'
 import { InputContact } from './utils/components/input-contact'
 import { TextareaContact } from './utils/components/textarea-contact'
+import { Button } from '../../../shared/components/button'
+import { ButtonSocialMedia } from '@/shared/components/button-social-media/ButtonSocialMedia'
+import { Discord } from '@/shared/assets/svgs/Discord'
+import { Linkedin } from '@/shared/assets/svgs/Linkedin'
 
 export default function ContactPage() {
   return (
@@ -46,6 +50,40 @@ export default function ContactPage() {
             required
           />
         </TextareaContact.Root>
+
+        <div className="flex items-center justify-start w-full gap-6">
+          <Button.Root type="submit">
+            <Button.Text>Enviar</Button.Text>
+            <Button.Icon color="blue">
+              <Send size={25} />
+            </Button.Icon>
+          </Button.Root>
+
+          <span className="font-extrabold text-[1.2rem] text-grey-500">OU</span>
+
+          <div className="flex items-center justify-center gap-3">
+            <ButtonSocialMedia
+              href="https://github.com/daviaxs"
+              variant="secondary"
+            >
+              <Github size={30} />
+            </ButtonSocialMedia>
+
+            <ButtonSocialMedia
+              href="https://discord.com/users/852904928166281248"
+              variant="secondary"
+            >
+              <Discord />
+            </ButtonSocialMedia>
+
+            <ButtonSocialMedia
+              href="https://www.linkedin.com/in/daviaxs/"
+              variant="secondary"
+            >
+              <Linkedin />
+            </ButtonSocialMedia>
+          </div>
+        </div>
       </form>
     </div>
   )
