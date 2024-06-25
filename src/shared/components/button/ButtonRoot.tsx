@@ -33,11 +33,10 @@ export function ButtonRoot({
     >
       <div
         className={`flex items-center justify-center border-b-[2px] rounded-lg gap-4 transition-colors
-        ${color === 'blue' ? 'bg-blue-600' : 'bg-violet-600'}
-        ${color === 'blue' ? 'hover:bg-blue-700' : 'hover:bg-violet-700'}
-        ${color === 'blue' ? 'border-blue-800' : 'border-violet-700'}
-        ${variant === 'small' ? 'px-3' : 'px-6'}
-        ${variant === 'small' ? 'py-1' : 'py-2'}
+        ${color === 'blue' && `bg-blue-600 hover:bg-blue-700 border-blue-800`}
+        ${color === 'violet' && `bg-violet-600 hover:bg-violet-700 border-violet-700`}
+        ${variant === 'small' && `px-3 py-1 h-[3rem]`}
+        ${variant === 'normal' && `px-6 py-2 h-[4rem]`}
       `}
       >
         {childrenWithProps}
