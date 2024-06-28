@@ -1,11 +1,11 @@
 import { Github, Mail, MessageCircleMore, Send, User } from 'lucide-react'
-import { Title } from '../utils/components/Title'
 import { InputContact } from './utils/components/input-contact'
 import { TextareaContact } from './utils/components/textarea-contact'
 import { Button } from '../../../shared/components/button'
 import { ButtonSocialMedia } from '@/shared/components/button-social-media/ButtonSocialMedia'
 import { Discord } from '@/shared/assets/svgs/Discord'
 import { Linkedin } from '@/shared/assets/svgs/Linkedin'
+import { Title } from '@/app/utils/Title'
 
 export default function ContactPage() {
   return (
@@ -18,7 +18,13 @@ export default function ContactPage() {
         </p>
       </div>
 
-      <form className="flex flex-col w-full items-center justify-start gap-[1.5rem]">
+      <form
+        className="flex flex-col w-full items-center justify-start gap-[1.5rem]"
+        action="https://formsubmit.co/cadwvk@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_next" value="http://localhosto/form-sent" />
+
         <InputContact.Root>
           <User size={30} className="text-grey-200" />
 
