@@ -9,10 +9,10 @@ import { Title } from '@/app/utils/Title'
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col items-center justify-start py-6 gap-5 px-20">
+    <div className="flex flex-col items-center justify-start py-6 gap-5 px-20 max-md:px-4">
       <div>
         <Title className="text-center">Formulário de contato</Title>
-        <p className="font-bold text-grey-100 text-[1.2rem] text-center">
+        <p className="font-bold text-grey-100 text-[1.2rem] text-center max-md:text-[1rem] max-sm:text-[0.8rem]">
           Se você tem um projeto interessante em mente ou precisa de ajuda em um
           projeto já existente, entre em contato comigo agora mesmo!
         </p>
@@ -61,7 +61,7 @@ export default function ContactPage() {
           />
         </TextareaContact.Root>
 
-        <div className="flex items-center justify-start w-full gap-6">
+        <div className="flex items-center justify-start w-full gap-6 max-lg:flex-col max-lg:gap-3">
           <Button.Root type="submit">
             <Button.Text>Enviar</Button.Text>
             <Button.Icon color="blue">
