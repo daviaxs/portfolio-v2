@@ -33,27 +33,21 @@ export function CardAbout() {
       </div>
 
       <p>
-        Olá, seja bem-vindo ao meu mundo digital! Me chamo Davi e tenho a paixão
-        de criar experiências incríveis para as pessoas através da programação.
-        Sou um jovem de {getYearsOld()} anos, atualmente desenvolvedor
-        fullstack, porém com foco no front-end.
+        Desenvolvedor fullstack com 3 anos de experiência em projetos próprios,
+        meu nome é Davi, um jovem de {getYearsOld()} anos, e sou movido pela
+        paixão de criar experiências incríveis através da programação.
         <br />
         <br />
-        Sou movido por desafios, e é isso que me motiva a buscar sempre o
-        próximo nível em minhas aplicações. Aperfeiçoar cada detalhe, criar
-        interfaces intuitivas e dinâmicas, além de proporcionar uma experiência
-        única ao usuário, são alguns dos meus objetivos.
+        Conhecimento em React JS, Node, e TypeScript, com experiência na criação
+        de aplicações escaláveis, sempre focando no desempenho e na usabilidade
+        para o usuário. Minha base sólida em desenvolvimento web facilita a
+        adaptação e aprendizado de novas linguagens e ferramentas, permitindo-me
+        oferecer soluções eficientes e inovadoras.
         <br />
         <br />
-        Estou sempre em busca de novos conhecimentos e tecnologias que possam
-        aprimorar minhas habilidades e trazer ainda mais qualidade às minhas
-        aplicações. Busco constantemente me atualizar em relação às tendências
-        do mercado e estar sempre um passo à frente.
-        <br />
-        <br />
-        Fique à vontade para navegar pelo meu portfólio e conferir alguns dos
-        meus projetos. E se precisar de ajuda para criar algo inovador e
-        desafiador, entre em contato comigo agora mesmo!
+        Comprometido com a excelência, busco sempre aprimorar minhas habilidades
+        e estar atualizado com as tendências tecnológicas para entregar produtos
+        de alta qualidade.
       </p>
     </div>
   )
