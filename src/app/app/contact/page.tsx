@@ -6,6 +6,7 @@ import { ButtonSocialMedia } from '@/shared/components/button-social-media/Butto
 import { Discord } from '@/shared/assets/svgs/Discord'
 import { Linkedin } from '@/shared/assets/svgs/Linkedin'
 import { Title } from '@/app/utils/Title'
+import { env } from '@/env'
 
 export default function ContactPage() {
   return (
@@ -26,7 +27,7 @@ export default function ContactPage() {
         <input
           type="hidden"
           name="_next"
-          value="http://localhost:3000/form-sent"
+          value={`${env.WEB_SITE_URL}/form-sent`}
         />
 
         <InputContact.Root>

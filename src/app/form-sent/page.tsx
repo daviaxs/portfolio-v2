@@ -3,6 +3,7 @@ import { Title } from '../utils/Title'
 import { Undo2 } from 'lucide-react'
 import Link from 'next/link'
 import { AnimatePage } from '../app/animatePage'
+import { env } from '@/env'
 
 export default function FormSent() {
   return (
@@ -17,7 +18,7 @@ export default function FormSent() {
           </p>
         </div>
 
-        <Link href="http://localhost:3000/app/home">
+        <Link href={`${env.WEB_SITE_URL}/app/home`}>
           <Button.Root>
             <Button.Text>Voltar</Button.Text>
             <Button.Icon>
