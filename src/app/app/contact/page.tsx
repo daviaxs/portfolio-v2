@@ -23,7 +23,11 @@ export default function ContactPage() {
         action="https://formsubmit.co/cadwvk@gmail.com"
         method="POST"
       >
-        <input type="hidden" name="_next" value="http://localhosto/form-sent" />
+        <input
+          type="hidden"
+          name="_next"
+          value="http://localhost:3000/form-sent"
+        />
 
         <InputContact.Root>
           <User size={30} className="text-grey-200" />
