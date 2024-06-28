@@ -1,7 +1,7 @@
 import { TypeScript } from '@/shared/assets/svgs/TypeScript'
 import { TechCard } from './utils/components'
 import { ReactIcon } from '@/shared/assets/svgs/React'
-import { Title } from '@/app/app/utils/components/Title'
+import { Title } from '@/app/utils/Title'
 
 export function MainSkills() {
   return (

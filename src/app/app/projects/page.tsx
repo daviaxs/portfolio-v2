@@ -2,7 +2,7 @@ import { ProjectCard } from './utils/components/project-card'
 import ImgNotLoad from '@/shared/assets/imgs/img-not-load-base.png'
 import { ProjectsFeaturedList } from './utils/ProjectsFeaturedList'
 import { ProjectsList } from './utils/ProjectsList'
-import { Title } from '../utils/components/Title'
+import { Title } from '@/app/utils/Title'
 
 export default function ProjectsPage() {
   return (

@@ -2,7 +2,7 @@ import { CodeXml, Palette } from 'lucide-react'
 import { SkillsCard } from './utils/components'
 import { programmingSkills } from './programming-skills'
 import { designSkills } from './design-skills'
-import { Title } from '@/app/app/utils/components/Title'
+import { Title } from '@/app/utils/Title'
 
 export function Skills() {
   return (
