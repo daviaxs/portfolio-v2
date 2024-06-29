@@ -18,11 +18,21 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   )
 
   useEffect(() => {
-    setTranslations(language[currentLanguage])
-  }, [currentLanguage])
+    const languageStorage = window.localStorage.getItem(
+      'language',
+    ) as LanguageKeys
+
+    if (languageStorage) {
+      setCurrentLanguage(languageStorage)
+      setTranslations(language[languageStorage])
+    }
+  }, [])
 
   const changeLanguage = (lang: LanguageKeys) => {
+    const changedLanguage = language[lang]
     setCurrentLanguage(lang)
+    setTranslations(changedLanguage)
+    window.localStorage.setItem('language', lang)
   }
 
   return (
