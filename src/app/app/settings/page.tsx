@@ -1,15 +1,15 @@
 'use client'
 
 import { Title } from '@/app/utils/Title'
-import { Brazil } from '@/shared/assets/svgs/Brazil'
-import { UnitedStates } from '@/shared/assets/svgs/UnitedStates'
 import { Globe } from 'lucide-react'
 import { ButtonChangeLanguage } from './utils/components/button-change-language'
 import { useContext } from 'react'
 import { LanguageContext } from '@/shared/context/LanguageContext'
+import { languageOptions } from '@/shared/language'
 
 export default function Settings() {
-  const { changeLanguage, translations } = useContext(LanguageContext)
+  const { changeLanguage, translations, currentLanguage } =
+    useContext(LanguageContext)
 
   return (
     <div className="flex flex-col gap-6 py-4 items-start justify-start w-full h-fit">
@@ -24,21 +24,25 @@ export default function Settings() {
         </div>
 
         <div className="flex flex-col gap-4 w-full">
-          <ButtonChangeLanguage.Root onClick={() => changeLanguage('PTBR')}>
-            <ButtonChangeLanguage.Title>Português</ButtonChangeLanguage.Title>
+          {languageOptions.map(({ icon: Icon, key, localeLabel, title }) => {
+            return (
+              <ButtonChangeLanguage.Root
+                key={key}
+                onClick={() => changeLanguage(key)}
+                className={
+                  currentLanguage === key
+                    ? 'outline outline-1 outline-green-400'
+                    : ''
+                }
+              >
+                <ButtonChangeLanguage.Title>{title}</ButtonChangeLanguage.Title>
 
-            <ButtonChangeLanguage.LocaleIndicator label="PT-BR">
-              <Brazil />
-            </ButtonChangeLanguage.LocaleIndicator>
-          </ButtonChangeLanguage.Root>
-
-          <ButtonChangeLanguage.Root onClick={() => changeLanguage('EN')}>
-            <ButtonChangeLanguage.Title>Inglês</ButtonChangeLanguage.Title>
-
-            <ButtonChangeLanguage.LocaleIndicator label="EN">
-              <UnitedStates />
-            </ButtonChangeLanguage.LocaleIndicator>
-          </ButtonChangeLanguage.Root>
+                <ButtonChangeLanguage.LocaleIndicator label={localeLabel}>
+                  <Icon />
+                </ButtonChangeLanguage.LocaleIndicator>
+              </ButtonChangeLanguage.Root>
+            )
+          })}
         </div>
       </div>
     </div>
