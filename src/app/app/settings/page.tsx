@@ -24,25 +24,34 @@ export default function Settings() {
         </div>
 
         <div className="flex flex-col gap-4 w-full">
-          {languageOptions.map(({ icon: Icon, key, localeLabel, title }) => {
-            return (
-              <ButtonChangeLanguage.Root
-                key={key}
-                onClick={() => changeLanguage(key)}
-                className={
-                  currentLanguage === key
-                    ? 'outline outline-1 outline-green-400'
-                    : ''
-                }
-              >
-                <ButtonChangeLanguage.Title>{title}</ButtonChangeLanguage.Title>
+          {languageOptions.map(
+            ({
+              key,
+              languageTitle,
+              localeLabel,
+              languageIcon: LanguageIcon,
+            }) => {
+              return (
+                <ButtonChangeLanguage.Root
+                  key={key}
+                  onClick={() => changeLanguage(key)}
+                  className={
+                    currentLanguage === key
+                      ? 'outline outline-1 outline-green-400'
+                      : ''
+                  }
+                >
+                  <ButtonChangeLanguage.Title>
+                    {languageTitle}
+                  </ButtonChangeLanguage.Title>
 
-                <ButtonChangeLanguage.LocaleIndicator label={localeLabel}>
-                  <Icon />
-                </ButtonChangeLanguage.LocaleIndicator>
-              </ButtonChangeLanguage.Root>
-            )
-          })}
+                  <ButtonChangeLanguage.LocaleIndicator label={localeLabel}>
+                    <LanguageIcon />
+                  </ButtonChangeLanguage.LocaleIndicator>
+                </ButtonChangeLanguage.Root>
+              )
+            },
+          )}
         </div>
       </div>
     </div>
