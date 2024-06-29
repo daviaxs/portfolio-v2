@@ -13,10 +13,20 @@ export type Translation = (typeof language)[LanguageKeys]
 
 export const languageOptions: Array<{
   key: LanguageKeys
-  title: string
-  icon: React.ComponentType
+  languageTitle: string
+  languageIcon: React.ComponentType
   localeLabel: string
 }> = [
-  { key: 'PTBR', title: 'Português', icon: Brazil, localeLabel: 'PT-BR' },
-  { key: 'EN', title: 'Inglês', icon: UnitedStates, localeLabel: 'EN' },
+  {
+    key: 'PTBR',
+    languageTitle: 'Português',
+    languageIcon: Brazil,
+    localeLabel: 'PT-BR',
+  },
+  {
+    key: 'EN',
+    languageTitle: 'Inglês',
+    languageIcon: UnitedStates,
+    localeLabel: 'EN',
+  },
 ]
