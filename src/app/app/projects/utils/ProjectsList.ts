@@ -19,6 +19,7 @@ export const ProjectsList = [
     deployUrl: 'https://dx-store.vercel.app',
     githubUrl: 'https://github.com/daviaxs/DX-Store',
   },
+
   {
     img: DtMoneyImg,
     imgAlt: 'dt-money',
