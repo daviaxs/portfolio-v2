@@ -15,11 +15,11 @@ export default function AboutPage() {
 
       <Separator />
 
-      <ExperienceOverview />
+      <Skills />
 
       <Separator />
 
-      <Skills />
+      <ExperienceOverview />
     </div>
   )
 }
