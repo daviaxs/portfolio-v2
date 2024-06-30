@@ -1,3 +1,5 @@
+'use client'
+
 import { WavingHand } from '@/shared/assets/svgs/WavingHand'
 import DaviAXSDesenhoViolet from '@/shared/assets/imgs/daviaxs-desenho-violet.png'
 import Image from 'next/image'
@@ -5,8 +7,12 @@ import { ButtonSocialMedia } from '@/shared/components/button-social-media/Butto
 import { Github } from 'lucide-react'
 import { Discord } from '@/shared/assets/svgs/Discord'
 import { Linkedin } from '@/shared/assets/svgs/Linkedin'
+import { useContext } from 'react'
+import { LanguageContext } from '@/shared/context/LanguageContext'
 
 export default function HomePage() {
+  const { translations } = useContext(LanguageContext)
+
   return (
     <div className="flex items-center justify-between w-full h-full max-lg:flex-col max-lg:justify-start max-lg:items-center max-lg:gap-8 max-lg:pt-5">
       <div className="flex flex-col items-start gap-2">
@@ -21,7 +27,7 @@ export default function HomePage() {
 
           <div className="max-lg:flex max-lg:flex-col max-lg:items-center">
             <p className="font-extrabold text-[2.375rem] max-lg:text-[1.8rem] max-sm:text-[1.4rem]">
-              Olá, eu sou
+              {translations.homePage.textHello}
             </p>
 
             <h3 className="font-extrabold text-[4.75rem] leading-[100%] max-lg:text-[4.2rem] max-sm:text-[3.3rem]">
@@ -29,7 +35,7 @@ export default function HomePage() {
             </h3>
 
             <p className="font-extrabold text-[2.375rem] text-green-200 decoration-green-200 decoration-2 underline max-lg:text-[1.8rem] max-sm:text-[1.4rem]">
-              Desenvolvedor Fullstack
+              {translations.homePage.textRole}
             </p>
           </div>
         </div>
