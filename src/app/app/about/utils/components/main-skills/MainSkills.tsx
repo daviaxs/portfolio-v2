@@ -1,12 +1,18 @@
+'use client'
+
 import { TypeScript } from '@/shared/assets/svgs/TypeScript'
 import { TechCard } from './utils/components'
 import { ReactIcon } from '@/shared/assets/svgs/React'
 import { Title } from '@/app/utils/Title'
+import { LanguageContext } from '@/shared/context/LanguageContext'
+import { useContext } from 'react'
 
 export function MainSkills() {
+  const { translations } = useContext(LanguageContext)
+
   return (
     <div className="flex flex-col gap-6 items-start justify-start w-full h-fit">
-      <Title>Principais habilidades</Title>
+      <Title>{translations.aboutPage.mainSkills.title}</Title>
 
       <div className="w-full flex items-center justify-between gap-4 max-md:flex-col">
         <TechCard.Root type="primary">
@@ -17,7 +23,9 @@ export function MainSkills() {
 
             <TechCard.Texts
               title="TypeScript"
-              description=" É uma versão de JavaScript com verificação de tipo estático, oferecendo um conjunto mais robusto de ferramentas para desenvolvimento em larga escala."
+              description={
+                translations.aboutPage.mainSkills.techs.typescript.description
+              }
             />
           </TechCard.Content>
         </TechCard.Root>
@@ -30,7 +38,9 @@ export function MainSkills() {
 
             <TechCard.Texts
               title="React"
-              description="É uma biblioteca JavaScript para criar interfaces de usuário eficientes e reutilizáveis, ideal para aplicações de página única."
+              description={
+                translations.aboutPage.mainSkills.techs.react.description
+              }
             />
           </TechCard.Content>
         </TechCard.Root>

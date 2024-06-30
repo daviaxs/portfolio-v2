@@ -1,13 +1,19 @@
+'use client'
+
 import { ExperienceImg } from './utils/components/ExperienceImg'
 import { ExperienceCard } from './utils/components/index'
 import VectorImg from '@/shared/assets/imgs/vector-img-gradient.png'
 import SpiderLinkImg from '@/shared/assets/imgs/spiderlink-img.png'
 import { Title } from '@/app/utils/Title'
+import { LanguageContext } from '@/shared/context/LanguageContext'
+import { useContext } from 'react'
 
 export function ExperienceOverview() {
+  const { translations } = useContext(LanguageContext)
+
   return (
     <div className="flex flex-col gap-6 items-start justify-start w-full h-fit">
-      <Title>Experiência</Title>
+      <Title>{translations.aboutPage.experienceOverview.title}</Title>
 
       <div className="flex flex-col items-start justify-start gap-4 w-full">
         <ExperienceCard.Root>
@@ -16,25 +22,37 @@ export function ExperienceOverview() {
 
             <ExperienceCard.Job.JobDetails
               company="SpiderLink"
-              jobType="Freelance"
-              startDate="Jan de 2024"
-              endDate="Mar de 2024"
-              location="Remoto"
+              jobType={
+                translations.aboutPage.experienceOverview.jobs.spiderLink
+                  .jobType
+              }
+              startDate={
+                translations.aboutPage.experienceOverview.jobs.spiderLink
+                  .startDate
+              }
+              endDate={
+                translations.aboutPage.experienceOverview.jobs.spiderLink
+                  .endDate
+              }
+              location={
+                translations.aboutPage.experienceOverview.jobs.spiderLink
+                  .location
+              }
             >
               <ExperienceCard.Job.JobDetailsTitle>
-                Developer
+                {
+                  translations.aboutPage.experienceOverview.jobs.spiderLink
+                    .jobTitle
+                }
               </ExperienceCard.Job.JobDetailsTitle>
             </ExperienceCard.Job.JobDetails>
           </ExperienceCard.Content>
 
           <ExperienceCard.Job.JobDescription>
-            Durante o projeto na SpiderLink, fui responsável por desenvolver
-            todas as etapas, desde o layout até o front-end e back-end da
-            aplicação. O produto se trata de um modelo único para venda de
-            sites. A aplicação inclui uma página inicial onde os clientes podem
-            selecionar seus pedidos e uma dashboard totalmente editável para o
-            administrador do site, permitindo adicionar, editar ou remover
-            produtos, entre outras customizações.
+            {
+              translations.aboutPage.experienceOverview.jobs.spiderLink
+                .description
+            }
           </ExperienceCard.Job.JobDescription>
 
           <ExperienceCard.Job.JobTags>
@@ -57,13 +75,24 @@ export function ExperienceOverview() {
 
             <ExperienceCard.Job.JobDetails
               company="Moldrin"
-              jobType="Freelance"
-              startDate="Ago de 2021"
-              endDate="Jan de 2023"
-              location="Remoto"
+              jobType={
+                translations.aboutPage.experienceOverview.jobs.moldrin.jobType
+              }
+              startDate={
+                translations.aboutPage.experienceOverview.jobs.moldrin.startDate
+              }
+              endDate={
+                translations.aboutPage.experienceOverview.jobs.moldrin.endDate
+              }
+              location={
+                translations.aboutPage.experienceOverview.jobs.moldrin.location
+              }
             >
               <ExperienceCard.Job.JobDetailsTitle>
-                Editor
+                {
+                  translations.aboutPage.experienceOverview.jobs.moldrin
+                    .jobTitle
+                }
               </ExperienceCard.Job.JobDetailsTitle>
             </ExperienceCard.Job.JobDetails>
           </ExperienceCard.Content>

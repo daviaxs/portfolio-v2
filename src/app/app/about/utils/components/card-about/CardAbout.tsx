@@ -1,7 +1,13 @@
+'use client'
+
 import Image from 'next/image'
 import DaviAxsDesenho from '@/shared/assets/imgs/daviaxs-desenho-com-bg.png'
+import { LanguageContext } from '@/shared/context/LanguageContext'
+import { useContext } from 'react'
 
 export function CardAbout() {
+  const { translations } = useContext(LanguageContext)
+
   function getYearsOld() {
     const birthDate = new Date('2006-01-14')
     const currentDate = new Date()
@@ -26,28 +32,21 @@ export function CardAbout() {
 
         <div className="flex flex-col items-start gap-1 mt-1">
           <h4 className="font-bold text-[2.5rem] leading-[100%] max-sm:text-[1.8rem]">
-            Sobre mim
+            {translations.aboutPage.title}
           </h4>
           <span className="h-[8px] w-[60%] bg-grey-500 rounded-full" />
         </div>
       </div>
 
       <p>
-        Desenvolvedor fullstack com 3 anos de experiência em projetos próprios,
-        meu nome é Davi, um jovem de {getYearsOld()} anos, e sou movido pela
-        paixão de criar experiências incríveis através da programação.
+        {translations.aboutPage.textAbout.part1} {getYearsOld()}{' '}
+        {translations.aboutPage.textAbout.part2}
         <br />
         <br />
-        Conhecimento em React JS, Node, e TypeScript, com experiência na criação
-        de aplicações escaláveis, sempre focando no desempenho e na usabilidade
-        para o usuário. Minha base sólida em desenvolvimento web facilita a
-        adaptação e aprendizado de novas linguagens e ferramentas, permitindo-me
-        oferecer soluções eficientes e inovadoras.
+        {translations.aboutPage.textAbout.part3}
         <br />
         <br />
-        Comprometido com a excelência, busco sempre aprimorar minhas habilidades
-        e estar atualizado com as tendências tecnológicas para entregar produtos
-        de alta qualidade.
+        {translations.aboutPage.textAbout.part4}
       </p>
     </div>
   )
