@@ -3,10 +3,12 @@
 import { LogoDXAnimation } from '@/shared/components/logo-dx-animation/Logo-DX-Animation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { LoadingProgressBar } from './utils/components/loading-progress-bar/LoadingProgressBar'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { LanguageContext } from '@/shared/context/LanguageContext'
 
 export default function InitialPage() {
+  const { translations } = useContext(LanguageContext)
   const [dalay, setDelay] = useState(1000)
   const [exit, setExit] = useState(false)
   const router = useRouter()
@@ -63,7 +65,7 @@ export default function InitialPage() {
               transition: 'opacity 1s',
             }}
           >
-            © Criado por Davi Alves - 2024
+            {translations.initialPage.createdBy}
           </p>
         </motion.main>
       )}
