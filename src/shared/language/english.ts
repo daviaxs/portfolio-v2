@@ -100,6 +100,13 @@ export const english = {
       button: 'Enviar',
     },
   },
+  formSentPage: {
+    title: 'Formulario enviado!',
+    description: {
+      part1: 'Seu formulário foi entregue com sucesso!',
+      part2: 'Aguarde minha resposta em breve.',
+    },
+  },
   settingsPage: {
     title: 'Settings',
     language: {
