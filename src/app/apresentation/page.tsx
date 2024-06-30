@@ -8,8 +8,12 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Circle } from './utils/Circle'
+import { useContext } from 'react'
+import { LanguageContext } from '@/shared/context/LanguageContext'
 
 export default function ApresentationPage() {
+  const { translations } = useContext(LanguageContext)
+
   const sizesCircle = [
     'w-[400px] h-[400px]',
     'w-[600px] h-[600px]',
@@ -35,12 +39,11 @@ export default function ApresentationPage() {
           </div>
 
           <h1 className="font-extrabold text-[2.5rem] text-center leading-none text-grey-50 max-md:text-[1.8rem]">
-            Seja bem-vindo ao meu mundo digital!
+            {translations.apresentationPage.label}
           </h1>
 
           <p className="text-grey-200 font-medium text-[1rem] text-center mt-2 max-md:text-[0.7rem]">
-            Explore meu portfólio, descubra meus projetos e mergulhe no mundo da
-            programação comigo!
+            {translations.apresentationPage.description}
           </p>
         </motion.div>
 
@@ -64,7 +67,9 @@ export default function ApresentationPage() {
         >
           <Link href="/app/home">
             <Button.Root>
-              <Button.Text>Continuar</Button.Text>
+              <Button.Text>
+                {translations.apresentationPage.buttonContinue}
+              </Button.Text>
               <Button.Icon>
                 <ArrowRight size={25} />
               </Button.Icon>
