@@ -1,13 +1,19 @@
+'use client'
+
 import { ProjectCard } from './utils/components/project-card'
 import ImgNotLoad from '@/shared/assets/imgs/img-not-load-base.png'
 import { ProjectsFeaturedList } from './utils/ProjectsFeaturedList'
 import { ProjectsList } from './utils/ProjectsList'
 import { Title } from '@/app/utils/Title'
+import { LanguageContext } from '@/shared/context/LanguageContext'
+import { useContext } from 'react'
 
 export default function ProjectsPage() {
+  const { translations } = useContext(LanguageContext)
+
   return (
     <div className="flex flex-col gap-6 py-4 items-start justify-start w-full h-fit">
-      <Title>Projetos</Title>
+      <Title>{translations.projectsPage.title}</Title>
 
       {ProjectsFeaturedList.map((project, index) => (
         <ProjectCard.RootFeatured key={index}>
