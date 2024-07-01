@@ -5,11 +5,17 @@ import { Globe } from 'lucide-react'
 import { ButtonChangeLanguage } from './utils/components/button-change-language'
 import { useContext } from 'react'
 import { LanguageContext } from '@/shared/context/LanguageContext'
+import { LanguageKeys } from '@/shared/language'
 import { languageOptions } from './utils/languageOptions'
 
 export default function Settings() {
   const { changeLanguage, translations, currentLanguage } =
     useContext(LanguageContext)
+
+  function updateLanguage(key: LanguageKeys) {
+    changeLanguage(key)
+    window.location.reload()
+  }
 
   return (
     <div className="flex flex-col gap-6 py-4 items-start justify-start w-full h-fit">
@@ -34,7 +40,11 @@ export default function Settings() {
               return (
                 <ButtonChangeLanguage.Root
                   key={key}
-                  onClick={() => changeLanguage(key)}
+                  onClick={
+                    currentLanguage === key
+                      ? undefined
+                      : () => updateLanguage(key)
+                  }
                   className={
                     currentLanguage === key
                       ? 'outline outline-1 outline-green-400'
