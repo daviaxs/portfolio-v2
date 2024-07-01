@@ -111,6 +111,10 @@ export const english = {
     title: 'Settings',
     language: {
       title: 'Language',
+      options: {
+        portuguese: 'Português',
+        english: 'English',
+      },
     },
   },
 }

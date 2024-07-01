@@ -111,6 +111,10 @@ export const portugueseBrazil = {
     title: 'Configurações',
     language: {
       title: 'Idioma',
+      options: {
+        portuguese: 'Português',
+        english: 'Inglês',
+      },
     },
   },
 }
