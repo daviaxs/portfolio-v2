@@ -107,6 +107,7 @@ export const portugueseBrazil = {
       part1: 'Seu formulário foi entregue com sucesso!',
       part2: 'Aguarde minha resposta em breve.',
     },
+    buttonBack: 'Voltar',
   },
   settingsPage: {
     title: 'Configurações',
