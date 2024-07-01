@@ -12,22 +12,38 @@ interface LanguageContextType {
 export const LanguageContext = createContext({} as LanguageContextType)
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<LanguageKeys>(() => {
-    return (localStorage.getItem('currentLanguage') as LanguageKeys) || 'PTBR'
-  })
-
-  const [translations, setTranslations] = useState<Translation>(
-    language[currentLanguage],
-  )
+  const [currentLanguage, setCurrentLanguage] = useState<LanguageKeys>('PTBR')
+  const [translations, setTranslations] = useState<Translation>(language.PTBR)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setTranslations(language[currentLanguage])
+    const savedLanguage = localStorage.getItem(
+      'currentLanguage',
+    ) as LanguageKeys
+    if (savedLanguage && language[savedLanguage]) {
+      setCurrentLanguage(savedLanguage)
+      setTranslations(language[savedLanguage])
+    }
+    setIsLoading(false)
+  }, [])
 
-    localStorage.setItem('currentLanguage', currentLanguage)
-  }, [currentLanguage])
+  useEffect(() => {
+    if (!isLoading) {
+      localStorage.setItem('currentLanguage', currentLanguage)
+      setTranslations(language[currentLanguage])
+    }
+  }, [currentLanguage, isLoading])
 
   const changeLanguage = (lang: LanguageKeys) => {
     setCurrentLanguage(lang)
+  }
+
+  if (isLoading) {
+    return (
+      <div className="w-full h-full flex items-center justify-center font-bold text-[2rem]">
+        Loading...
+      </div>
+    )
   }
 
   return (
