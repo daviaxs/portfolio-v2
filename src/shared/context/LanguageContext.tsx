@@ -12,27 +12,22 @@ interface LanguageContextType {
 export const LanguageContext = createContext({} as LanguageContextType)
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<LanguageKeys>('PTBR')
+  const [currentLanguage, setCurrentLanguage] = useState<LanguageKeys>(() => {
+    return (localStorage.getItem('currentLanguage') as LanguageKeys) || 'PTBR'
+  })
+
   const [translations, setTranslations] = useState<Translation>(
     language[currentLanguage],
   )
 
   useEffect(() => {
-    const languageStorage = window.localStorage.getItem(
-      'language',
-    ) as LanguageKeys
+    setTranslations(language[currentLanguage])
 
-    if (languageStorage) {
-      setCurrentLanguage(languageStorage)
-      setTranslations(language[languageStorage])
-    }
-  }, [])
+    localStorage.setItem('currentLanguage', currentLanguage)
+  }, [currentLanguage])
 
   const changeLanguage = (lang: LanguageKeys) => {
-    const changedLanguage = language[lang]
     setCurrentLanguage(lang)
-    setTranslations(changedLanguage)
-    window.localStorage.setItem('language', lang)
   }
 
   return (
