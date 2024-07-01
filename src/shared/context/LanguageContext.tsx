@@ -30,8 +30,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (!isLoading) {
       localStorage.setItem('currentLanguage', currentLanguage)
-      setTranslations(language[currentLanguage])
     }
+    setTranslations(language[currentLanguage])
   }, [currentLanguage, isLoading])
 
   const changeLanguage = (lang: LanguageKeys) => {
