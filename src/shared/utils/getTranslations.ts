@@ -1,7 +1,10 @@
 import { LanguageKeys, Translation, language } from '../language'
 
 export const getCurrentLanguage = (): LanguageKeys => {
-  return (localStorage.getItem('currentLanguage') as LanguageKeys) || 'PTBR'
+  if (typeof window !== 'undefined') {
+    return (localStorage.getItem('currentLanguage') as LanguageKeys) || 'PTBR'
+  }
+  return 'PTBR'
 }
 
 export const getTranslations = (): Translation => {
