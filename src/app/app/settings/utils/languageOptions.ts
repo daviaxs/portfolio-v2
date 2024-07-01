@@ -1,10 +1,9 @@
 import { Brazil } from '@/shared/assets/svgs/Brazil'
 import { UnitedStates } from '@/shared/assets/svgs/UnitedStates'
-import { LanguageKeys, language } from '@/shared/language'
-import { getCurrentLanguage } from '@/shared/utils/getCurrentLanguage'
+import { LanguageKeys } from '@/shared/language'
+import { getTranslations } from '@/shared/utils/getTranslations'
 
-const currentLanguage = getCurrentLanguage()
-const translations = language[currentLanguage]
+const translations = getTranslations()
 
 export const languageOptions: Array<{
   key: LanguageKeys
