@@ -98,6 +98,7 @@ export const english = {
         message: 'Digite sua mensagem...',
       },
       button: 'Enviar',
+      or: 'OR',
     },
   },
   formSentPage: {

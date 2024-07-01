@@ -88,7 +88,7 @@ export const portugueseBrazil = {
     },
   },
   contactPage: {
-    title: 'Contato',
+    title: 'Formulário de contato',
     description:
       'Se você tem um projeto interessante em mente ou precisa de ajuda em um projeto já existente, entre em contato comigo agora mesmo!',
     form: {
@@ -98,6 +98,7 @@ export const portugueseBrazil = {
         message: 'Digite sua mensagem...',
       },
       button: 'Enviar',
+      or: 'OU',
     },
   },
   formSentPage: {
