@@ -5,7 +5,7 @@ import { Globe } from 'lucide-react'
 import { ButtonChangeLanguage } from './utils/components/button-change-language'
 import { useContext } from 'react'
 import { LanguageContext } from '@/shared/context/LanguageContext'
-import { languageOptions } from '@/shared/language'
+import { languageOptions } from './utils/languageOptions'
 
 export default function Settings() {
   const { changeLanguage, translations, currentLanguage } =
