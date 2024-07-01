@@ -1,3 +1,5 @@
+'use client'
+
 import { Github, Mail, MessageCircleMore, Send, User } from 'lucide-react'
 import { InputContact } from './utils/components/input-contact'
 import { TextareaContact } from './utils/components/textarea-contact'
@@ -6,16 +8,18 @@ import { ButtonSocialMedia } from '@/shared/components/button-social-media/Butto
 import { Discord } from '@/shared/assets/svgs/Discord'
 import { Linkedin } from '@/shared/assets/svgs/Linkedin'
 import { Title } from '@/app/utils/Title'
-import { env } from '@/env'
+import { LanguageContext } from '@/shared/context/LanguageContext'
+import { useContext } from 'react'
 
 export default function ContactPage() {
+  const { translations } = useContext(LanguageContext)
+
   return (
     <div className="flex flex-col items-center justify-start py-6 gap-5 px-20 max-md:px-4">
       <div>
-        <Title className="text-center">Formulário de contato</Title>
+        <Title className="text-center">{translations.contactPage.title}</Title>
         <p className="font-bold text-grey-100 text-[1.2rem] text-center max-md:text-[1rem] max-sm:text-[0.8rem]">
-          Se você tem um projeto interessante em mente ou precisa de ajuda em um
-          projeto já existente, entre em contato comigo agora mesmo!
+          {translations.contactPage.description}
         </p>
       </div>
 
@@ -27,7 +31,7 @@ export default function ContactPage() {
         <input
           type="hidden"
           name="_next"
-          value={`${env.WEB_SITE_URL}/form-sent`}
+          value={`${process.env.WEB_SITE_URL}/form-sent`}
         />
 
         <InputContact.Root>
@@ -35,7 +39,7 @@ export default function ContactPage() {
 
           <InputContact.Input
             id="name"
-            placeholder="Nome"
+            placeholder={translations.contactPage.form.inputsPlaceholder.name}
             type="text"
             required
           />
@@ -46,7 +50,7 @@ export default function ContactPage() {
 
           <InputContact.Input
             id="email"
-            placeholder="Email"
+            placeholder={translations.contactPage.form.inputsPlaceholder.email}
             type="email"
             required
           />
@@ -57,20 +61,24 @@ export default function ContactPage() {
 
           <TextareaContact.Textarea
             id="message"
-            placeholder="Digite sua mensagem..."
+            placeholder={
+              translations.contactPage.form.inputsPlaceholder.message
+            }
             required
           />
         </TextareaContact.Root>
 
         <div className="flex items-center justify-start w-full gap-6 max-lg:flex-col max-lg:gap-3">
           <Button.Root type="submit">
-            <Button.Text>Enviar</Button.Text>
+            <Button.Text>{translations.contactPage.form.button}</Button.Text>
             <Button.Icon color="blue">
               <Send size={25} />
             </Button.Icon>
           </Button.Root>
 
-          <span className="font-extrabold text-[1.2rem] text-grey-500">OU</span>
+          <span className="font-extrabold text-[1.2rem] text-grey-500">
+            {translations.contactPage.form.or}
+          </span>
 
           <div className="flex items-center justify-center gap-3">
             <ButtonSocialMedia
