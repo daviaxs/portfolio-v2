@@ -5,11 +5,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { GetDesktopAndTabletIcon } from '../../GetDesktopAndTabletIcon'
 import { navigationLinks } from '../../../navigationLinks'
+import { LanguageContext } from '@/shared/context/LanguageContext'
+import { useContext } from 'react'
 
 const desktopLinks = navigationLinks.filter((link) => link.link !== '/app/more')
 
 export function NavigationDialog() {
   const pathName = usePathname()
+  const { translations } = useContext(LanguageContext)
 
   return (
     <Dialog.Root>
@@ -24,7 +27,9 @@ export function NavigationDialog() {
 
         <Dialog.Content className="DialogContent border-grey-500 border-r-[1px]">
           <header className="w-full flex items-center justify-between p-4 border-grey-500 border-b-[1px]">
-            <p className="font-extrabold text-[1.2rem]">Explorar</p>
+            <p className="font-extrabold text-[1.2rem]">
+              {translations.navigation.navigationDialog.explore}
+            </p>
 
             <Dialog.Close asChild>
               <div className="hover:bg-grey-500 p-2 rounded-full cursor-pointer transition-colors w-fit">
