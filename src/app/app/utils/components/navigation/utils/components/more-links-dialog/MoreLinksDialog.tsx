@@ -1,3 +1,5 @@
+'use client'
+
 import * as Dialog from '@radix-ui/react-dialog'
 import { AlignJustify, X } from 'lucide-react'
 import './moreLinksDialog.style.css'
@@ -5,6 +7,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { GetDesktopAndTabletIcon } from '../../GetDesktopAndTabletIcon'
 import { navigationLinks } from '../../../navigationLinks'
+import { useContext } from 'react'
+import { LanguageContext } from '@/shared/context/LanguageContext'
 
 const moreLinks = navigationLinks.filter(
   (page) =>
@@ -15,6 +19,7 @@ const moreLinks = navigationLinks.filter(
 
 export function MoreLinksDialog() {
   const pathName = usePathname()
+  const { translations } = useContext(LanguageContext)
 
   return (
     <Dialog.Root>
@@ -22,7 +27,9 @@ export function MoreLinksDialog() {
         <button className="w-[35px] rounded-lg cursor-pointer flex flex-col items-center justify-center transition-colors text-center outline-none gap-1">
           <AlignJustify size={25} />
 
-          <p className="font-medium text-sm opacity-70">Mais</p>
+          <p className="font-medium text-sm opacity-70">
+            {translations.navigation.moreLinksDialog.more}
+          </p>
         </button>
       </Dialog.Trigger>
 
@@ -31,7 +38,9 @@ export function MoreLinksDialog() {
 
         <Dialog.Content className="MoreLinksDialogContent">
           <header className="w-full flex items-center justify-between p-4 border-grey-500 border-b-[1px] border-t-[1px]">
-            <p className="font-extrabold text-[1.2rem]">Mais</p>
+            <p className="font-extrabold text-[1.2rem]">
+              {translations.navigation.moreLinksDialog.more}
+            </p>
 
             <Dialog.Close asChild>
               <div className="hover:bg-grey-500 p-2 rounded-full cursor-pointer transition-colors w-fit">
