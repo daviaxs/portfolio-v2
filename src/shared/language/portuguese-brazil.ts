@@ -128,6 +128,7 @@ export const portugueseBrazil = {
       projects: 'Projetos',
       contact: 'Contato',
       settings: 'Configurações',
+      settingsTablet: 'Config',
     },
     moreLinksDialog: {
       more: 'Mais',

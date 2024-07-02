@@ -128,6 +128,7 @@ export const english = {
       projects: 'Projects',
       contact: 'Contact',
       settings: 'Settings',
+      settingsTablet: 'Settings',
     },
     moreLinksDialog: {
       more: 'More',

@@ -49,6 +49,6 @@ export const navigationLinks: LinkType[] = [
     icon: 'settings',
     title: translations.navigation.navigationLinksTitles.settings,
     tabletAndMobileTitle:
-      translations.navigation.navigationLinksTitles.settings,
+      translations.navigation.navigationLinksTitles.settingsTablet,
   },
 ]
