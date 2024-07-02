@@ -22,7 +22,8 @@ export const navigationLinks: LinkType[] = [
     link: '/app/home',
     icon: 'home',
     title: translations.navigation.navigationLinksTitles.home,
-    tabletAndMobileTitle: translations.navigation.navigationLinksTitles.home,
+    tabletAndMobileTitle:
+      translations.navigation.navigationLinksTitles.homeTablet,
   },
   {
     link: '/app/about',

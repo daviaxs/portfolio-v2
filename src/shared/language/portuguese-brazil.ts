@@ -123,6 +123,7 @@ export const portugueseBrazil = {
   navigation: {
     navigationLinksTitles: {
       home: 'Página inicial',
+      homeTablet: 'Início',
       about: 'Sobre',
       projects: 'Projetos',
       contact: 'Contato',

@@ -123,6 +123,7 @@ export const english = {
   navigation: {
     navigationLinksTitles: {
       home: 'Home',
+      homeTablet: 'Home',
       about: 'About',
       projects: 'Projects',
       contact: 'Contact',
