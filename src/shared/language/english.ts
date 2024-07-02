@@ -131,5 +131,8 @@ export const english = {
     moreLinksDialog: {
       more: 'More',
     },
+    navigationDialog: {
+      explore: 'Explore',
+    },
   },
 }

@@ -131,5 +131,8 @@ export const portugueseBrazil = {
     moreLinksDialog: {
       more: 'Mais',
     },
+    navigationDialog: {
+      explore: 'Explorar',
+    },
   },
 }
