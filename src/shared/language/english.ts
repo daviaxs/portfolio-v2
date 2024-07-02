@@ -1,113 +1,113 @@
 export const english = {
   initialPage: {
-    createdBy: '© Criado por Davi Alves - 2024',
+    createdBy: '© Created by Davi Alves - 2024',
   },
   apresentationPage: {
-    label: 'Seja bem-vindo ao meu mundo digital!',
+    label: 'Welcome to my digital world!',
     description:
-      'Explore meu portfólio, descubra meus projetos e mergulhe no mundo da programação comigo!',
-    buttonContinue: 'Continuar',
+      'Explore my portfolio, discover my projects, and dive into the world of programming with me!',
+    buttonContinue: 'Continue',
   },
   homePage: {
-    textHello: 'Olá, eu sou',
-    textRole: 'Desenvolvedor Fullstack',
+    textHello: 'Hello, I am',
+    textRole: 'Fullstack Developer',
   },
   aboutPage: {
-    title: 'Sobre mim',
+    title: 'About Me',
     textAbout: {
       part1:
-        'Desenvolvedor fullstack com 3 anos de experiência em projetos próprios, meu nome é Davi, um jovem de',
+        'Fullstack developer with 3 years of experience in personal projects, my name is Davi, a young',
       part2:
-        'anos, e sou movido pela paixão de criar experiências incríveis através da programação.',
+        'years old, driven by the passion of creating amazing experiences through programming.',
       part3:
-        'Conhecimento em React JS, Node, e TypeScript, com experiência na criação de aplicações escaláveis, sempre focando no desempenho e na usabilidade para o usuário. Minha base sólida em desenvolvimento web facilita a adaptação e aprendizado de novas linguagens e ferramentas, permitindo-me oferecer soluções eficientes e inovadoras.',
+        'Knowledgeable in React JS, Node, and TypeScript, with experience in creating scalable applications, always focusing on performance and user usability. My solid foundation in web development makes it easy to adapt and learn new languages and tools, allowing me to offer efficient and innovative solutions.',
       part4:
-        'Comprometido com a excelência, busco sempre aprimorar minhas habilidades e estar atualizado com as tendências tecnológicas para entregar produtos de alta qualidade.',
+        'Committed to excellence, I always seek to improve my skills and stay updated with technological trends to deliver high-quality products.',
     },
     mainSkills: {
-      title: 'Principais habilidades',
+      title: 'Main Skills',
       techs: {
         typescript: {
           description:
-            'É uma versão de JavaScript com verificação de tipo estático, oferecendo um conjunto mais robusto de ferramentas para desenvolvimento em larga escala.',
+            'A version of JavaScript with static type checking, providing a more robust set of tools for large-scale development.',
         },
         react: {
           description:
-            'É uma biblioteca JavaScript para criar interfaces de usuário eficientes e reutilizáveis, ideal para aplicações de página única.',
+            'A JavaScript library for creating efficient and reusable user interfaces, ideal for single-page applications.',
         },
       },
     },
     skills: {
-      title: 'Minhas Habilidades',
+      title: 'My Skills',
       skillsCardsTitles: {
-        developer: 'Programação',
+        developer: 'Programming',
         design: 'Design',
       },
     },
     experienceOverview: {
-      title: 'Experiência',
+      title: 'Experience',
       jobs: {
         spiderLink: {
           jobType: 'Freelance',
-          startDate: 'Jan de 2024',
-          endDate: 'Mar de 2024',
-          location: 'Remoto',
+          startDate: 'Jan 2024',
+          endDate: 'Mar 2024',
+          location: 'Remote',
           jobTitle: 'Developer',
           description:
-            'Durante o projeto na SpiderLink, fui responsável por desenvolver todas as etapas, desde o layout até o front-end e back-end da aplicação. O produto se trata de um modelo único para venda de sites. A aplicação inclui uma página inicial onde os clientes podem selecionar seus pedidos e uma dashboard totalmente editável para o administrador do site, permitindo adicionar, editar ou remover produtos, entre outras customizações.',
+            'During the project at SpiderLink, I was responsible for developing all stages, from layout to front-end and back-end of the application. The product is a unique template for selling websites. The application includes a homepage where clients can select their orders and a fully editable dashboard for the site administrator, allowing the addition, editing, or removal of products, among other customizations.',
         },
         moldrin: {
           jobType: 'Freelance',
-          startDate: 'Ago de 2021',
-          endDate: 'Jan de 2023',
-          location: 'Remoto',
+          startDate: 'Aug 2021',
+          endDate: 'Jan 2023',
+          location: 'Remote',
           jobTitle: 'Editor',
         },
       },
     },
   },
   projectsPage: {
-    title: 'Projetos',
+    title: 'Projects',
     projects: {
       projectsFeatured: {
         spiderLink: {
           description:
-            "SpiderLink é uma startup que vende sites completos e personalizados para diferentes nichos. Com um modelo pronto e adaptável às necessidades do cliente, oferece recursos como painel de admin, produtos, carrinho e mais. O nome Fritz's é um exemplo fictício, usado para demonstrar o design e funcionalidade do site.",
+            "SpiderLink is a startup that sells complete and customized websites for different niches. With a ready-made and adaptable model to meet client needs, it offers features like an admin panel, products, cart, and more. The name Fritz's is a fictional example used to demonstrate the site's design and functionality.",
         },
       },
       projects: {
         dxStore: {
           description:
-            'DX Store é um site de e-commerce desenvolvido com ReactJS e Prisma, oferecendo aos usuários a oportunidade de explorar e simular compras de produtos eletrônicos. Com a conveniência do login via Google, os visitantes podem experimentar o processo de compra, graças à integração do modo de teste do Stripe.',
+            "DX Store is an e-commerce site developed with ReactJS and Prisma, offering users the opportunity to explore and simulate purchases of electronic products. With the convenience of Google login, visitors can experience the purchase process, thanks to the integration of Stripe's test mode.",
         },
         dtMoney: {
           description:
-            'DT Money é um site de gerenciamento de finanças pessoais com um design intuitivo. Registre suas transações com facilidade, veja entradas, saídas e o saldo total. Mantenha suas finanças sob controle de forma simples.',
+            'DT Money is a personal finance management site with an intuitive design. Easily record your transactions, view income, expenses, and the total balance. Keep your finances under control simply.',
         },
       },
     },
   },
   contactPage: {
-    title: 'Contato',
+    title: 'Contact',
     description:
-      'Se você tem um projeto interessante em mente ou precisa de ajuda em um projeto já existente, entre em contato comigo agora mesmo!',
+      'If you have an interesting project in mind or need help with an existing project, get in touch with me now!',
     form: {
       inputsPlaceholder: {
-        name: 'Nome',
+        name: 'Name',
         email: 'Email',
-        message: 'Digite sua mensagem...',
+        message: 'Enter your message...',
       },
-      button: 'Enviar',
+      button: 'Send',
       or: 'OR',
     },
   },
   formSentPage: {
-    title: 'Formulario enviado!',
+    title: 'Form Submitted!',
     description: {
-      part1: 'Seu formulário foi entregue com sucesso!',
-      part2: 'Aguarde minha resposta em breve.',
+      part1: 'Your form has been successfully delivered!',
+      part2: 'Wait for my response soon.',
     },
-    buttonBack: 'Voltar',
+    buttonBack: 'Back',
   },
   settingsPage: {
     title: 'Settings',
