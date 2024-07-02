@@ -70,6 +70,7 @@ export const english = {
     title: 'Projects',
     projects: {
       projectsFeatured: {
+        title: 'Featured Project',
         spiderLink: {
           description:
             "SpiderLink is a startup that sells complete and customized websites for different niches. With a ready-made and adaptable model to meet client needs, it offers features like an admin panel, products, cart, and more. The name Fritz's is a fictional example used to demonstrate the site's design and functionality.",
