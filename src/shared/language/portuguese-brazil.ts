@@ -120,4 +120,16 @@ export const portugueseBrazil = {
       },
     },
   },
+  navigation: {
+    navigationLinksTitles: {
+      home: 'Página inicial',
+      about: 'Sobre',
+      projects: 'Projetos',
+      contact: 'Contato',
+      settings: 'Configurações',
+    },
+    moreLinksDialog: {
+      more: 'Mais',
+    },
+  },
 }

@@ -120,4 +120,16 @@ export const english = {
       },
     },
   },
+  navigation: {
+    navigationLinksTitles: {
+      home: 'Home',
+      about: 'About',
+      projects: 'Projects',
+      contact: 'Contact',
+      settings: 'Settings',
+    },
+    moreLinksDialog: {
+      more: 'More',
+    },
+  },
 }
