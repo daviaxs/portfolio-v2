@@ -1,3 +1,5 @@
+import { getTranslations } from '@/shared/utils/getTranslations'
+
 export type GetNavigationIconProps =
   | 'home'
   | 'about'
@@ -13,35 +15,39 @@ type LinkType = {
   tabletAndMobileTitle?: string
 }
 
+const translations = getTranslations()
+
 export const navigationLinks: LinkType[] = [
   {
     link: '/app/home',
     icon: 'home',
-    title: 'Página inicial',
-    tabletAndMobileTitle: 'Início',
+    title: translations.navigation.navigationLinksTitles.home,
+    tabletAndMobileTitle: translations.navigation.navigationLinksTitles.home,
   },
   {
     link: '/app/about',
     icon: 'about',
-    title: 'Sobre',
-    tabletAndMobileTitle: 'Sobre',
+    title: translations.navigation.navigationLinksTitles.about,
+    tabletAndMobileTitle: translations.navigation.navigationLinksTitles.about,
   },
   {
     link: '/app/projects',
     icon: 'projects',
-    title: 'Projetos',
-    tabletAndMobileTitle: 'Projetos',
+    title: translations.navigation.navigationLinksTitles.projects,
+    tabletAndMobileTitle:
+      translations.navigation.navigationLinksTitles.projects,
   },
   {
     link: '/app/contact',
     icon: 'contact',
-    title: 'Contato',
-    tabletAndMobileTitle: 'Contato',
+    title: translations.navigation.navigationLinksTitles.contact,
+    tabletAndMobileTitle: translations.navigation.navigationLinksTitles.contact,
   },
   {
     link: '/app/settings',
     icon: 'settings',
-    title: 'Configurações',
-    tabletAndMobileTitle: 'Config',
+    title: translations.navigation.navigationLinksTitles.settings,
+    tabletAndMobileTitle:
+      translations.navigation.navigationLinksTitles.settings,
   },
 ]
