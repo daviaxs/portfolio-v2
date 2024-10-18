@@ -59,6 +59,7 @@ export default function HomePage() {
         src={DaviAXSDesenhoViolet}
         alt="desenho"
         className="lg:h-[75%] object-contain pointer-events-none max-lg:h-fit w-[30rem]"
+        priority
       />
 
       <span className="lg:hidden opacity-0">.</span>
