@@ -28,7 +28,7 @@ export default function InitialPage() {
   useEffect(() => {
     if (exit) {
       setTimeout(() => {
-        router.push('/apresentation')
+        router.push('/app/home')
       }, 600)
     }
   }, [exit, router])

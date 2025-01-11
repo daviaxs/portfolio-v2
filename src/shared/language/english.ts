@@ -2,12 +2,6 @@ export const english = {
   initialPage: {
     createdBy: '© Created by Davi Alves - 2024',
   },
-  apresentationPage: {
-    label: 'Welcome to my digital world!',
-    description:
-      'Explore my portfolio, discover my projects, and dive into the world of programming with me!',
-    buttonContinue: 'Continue',
-  },
   homePage: {
     textHello: 'Hello, I am',
     textRole: 'Fullstack Developer',

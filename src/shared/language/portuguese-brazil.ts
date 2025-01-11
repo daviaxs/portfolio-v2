@@ -2,12 +2,6 @@ export const portugueseBrazil = {
   initialPage: {
     createdBy: '© Criado por Davi Alves - 2024',
   },
-  apresentationPage: {
-    label: 'Seja bem-vindo ao meu mundo digital!',
-    description:
-      'Explore meu portfólio, descubra meus projetos e mergulhe no mundo da programação comigo!',
-    buttonContinue: 'Continuar',
-  },
   homePage: {
     textHello: 'Olá, eu sou',
     textRole: 'Desenvolvedor Fullstack',
